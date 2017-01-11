@@ -134,7 +134,7 @@ AUTHENTICATION_BACKENDS = (
 # SUIT CONFIGURATION
 # -----------------------------------------------------------------------------
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'galeria_begona',
+    'ADMIN_NAME': 'Galeria',
 }
 
 # STATIC CONFIGURATION
