@@ -70,12 +70,13 @@
 
   $.validator.setDefaults({
     invalidHandler: function (event, validator) {
-      console.log(this);
-      // $('#contact-form').find('.form-message')
-      // .removeClass($('#contact-form').hasClass('success') ? 'success' : 'error')
-      // .html('');
+      var form = $(this);
+      form.find('.form-message')
+      .removeClass($('#contact-form').hasClass('success') ? 'success' : 'error')
+      .html('');
     },
     submitHandler: function (form) {
+      console.log($(form).serialize());
       var fields = $(form).find('select, input, textarea, button'),
         formMessage = $(form).find('.form-message'),
         successMessage = $('<i class="fa fa-check-circle"></i><span>Mensaje enviado exitosamente</span>'),
@@ -90,7 +91,15 @@
 
       fields.attr('disabled', 'disabled');
       formMessage.html('');
-      $.post($(form).attr('action'), $(form).serialize())
+      $.ajax({
+        url: $(form).attr('action'),
+        method: 'POST',
+        data: $(form).serialize(),
+        headers: {
+          'X-CSRFToken': $(form).find('[name="csrfmiddlewaretoken"]').val(),
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
         .done(function (data) {
           setMessage(parseInt(data) === 1);
         })
