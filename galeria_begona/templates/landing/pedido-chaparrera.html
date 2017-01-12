@@ -1,5 +1,5 @@
-
 {% extends "partials/base.html" %}
+{% load static from staticfiles %}
 
 {% block meta %}
 {% endblock %}
@@ -17,8 +17,8 @@ Hacer pedido | Chaparreras
     Tomar medidas estando de pie con Con botín y pantalón de montar.
   </span>
   <div class="chaps-example-content">
-    <img class="show-on-mobile" src="img/chaps-foot-mobile.png" alt="Imagen de pierna" />
-    <img src="img/chaps-foot.png" alt="Imagen de pierna" />
+    <img class="show-on-mobile" src="{% static 'img/chaps-foot-mobile.png' %}" alt="Imagen de pierna" />
+    <img src="{% static 'img/chaps-foot.png' %}" alt="Imagen de pierna" />
     <div class="leg-parts-div">
       <div class="leg-part-wrapper active" data-number="1">
         <div class="leg-part-content">
@@ -102,11 +102,11 @@ Hacer pedido | Chaparreras
       Ve siguiendo los pasos y llenando los campos con tus medidas.
     </p>
     <div class="chaps-step-1-help">
-      <img src="img/chaps-arrow.png" alt="Flecha" />
+      <img src="{% static 'img/chaps-arrow.png' %}" alt="Flecha" />
       Empieza aquí
     </div>
     <div class="chaps-step-1-content">
-      <img src="img/chaps-foot.png" alt="Imagen de pierna" />
+      <img src="{% static 'img/chaps-foot.png' %}" alt="Imagen de pierna" />
       <div class="leg-parts-div">
         <div class="leg-part-wrapper active" data-number="1">
           <div class="leg-part-content">

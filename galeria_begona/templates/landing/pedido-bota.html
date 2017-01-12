@@ -1,5 +1,5 @@
-
 {% extends "partials/base.html" %}
+{% load static from staticfiles %}
 
 {% block meta %}
 {% endblock %}
@@ -14,7 +14,7 @@ Hacer pedido | Botas
   <span class="subtitle">¿Cómo sé mis medidas?</span>
 
   <span class="boot-example-text">Ejemplo de una pierna de 44 cm de largo:</span>
-  <img src="img/leg-example.png" class="boot-example-image" alt="Ejemplo de una pierna de 44 cm de largo." />
+  <img src="{% static 'img/leg-example.png' %}" class="boot-example-image" alt="Ejemplo de una pierna de 44 cm de largo." />
   <div class="product-form-step">
     <h2 class="step-title" data-number="1">Mide tu pierna</h2>
     <p class="step-instructions boots-1">
@@ -29,7 +29,7 @@ Hacer pedido | Botas
       <span class="help-text help-text-1">Medirse sentado con la pierna en un ángulo de 90 grados</span>
       <span class="help-text help-text-2">Las piernas por lo general llegan a medir hasta 36 cm de altura, entonces hasta 36 seria la última medida proporcionada</span>
       <span class="help-line"><span></span></span>
-      <img src="img/boot-step-1.png" alt="Imagen de pierna" />
+      <img src="{% static 'img/boot-step-1.png' %}" alt="Imagen de pierna" />
       <div class="inputs-div">
         <div class="input-row active">
           <span class="arrow"></span>
@@ -78,7 +78,7 @@ Hacer pedido | Botas
         </div>
       </div>
       <span class="help-text-3">
-        <img src="img/boot-arrow-1.png" alt="Flecha" />
+        <img src="{% static 'img/boot-arrow-1.png' %}" alt="Flecha" />
         Empieza aquí
       </span>
     </div>
@@ -97,7 +97,7 @@ Hacer pedido | Botas
             circunferencia del dedo gordo del pie al dedo chiquito.
           </p>
           <div class="instruction-elements">
-            <img src="img/boot-foot-image-1.png" class="instruction-image" alt="Mide tu pie - Figura 1" />
+            <img src="{% static 'img/boot-foot-image-1.png' %}" class="instruction-image" alt="Mide tu pie - Figura 1" />
             <input type="text" class="instruction-input" name="name" placeholder="Ej. 22.5 cm">
           </div>
         </div>
@@ -110,7 +110,7 @@ Hacer pedido | Botas
             empieza el dedo gordo hasta el hueso dónde empieza el dedo chiquito
           </p>
           <div class="instruction-elements">
-            <img src="img/boot-foot-image-2.png" class="instruction-image" alt="Mide tu pie - Figura 2" />
+            <img src="{% static 'img/boot-foot-image-2.png' %}" class="instruction-image" alt="Mide tu pie - Figura 2" />
             <input type="text" class="instruction-input" name="name" placeholder="Ej. 24.5 cm">
           </div>
         </div>
@@ -125,7 +125,7 @@ Hacer pedido | Botas
             a) Medir la circunferencia del empeine.
           </p>
           <div class="instruction-elements">
-            <img src="img/boot-foot-image-3.png" class="instruction-image" alt="Mide tu pie - Figura 3" />
+            <img src="{% static 'img/boot-foot-image-3.png' %}" class="instruction-image" alt="Mide tu pie - Figura 3" />
             <input type="text" class="instruction-input" name="name" placeholder="Ej. 25 cm">
           </div>
         </div>
@@ -137,7 +137,7 @@ Hacer pedido | Botas
             a) Medir la circunferencia desde el talón hasta el doblez del pie (queda en diagonal)
           </p>
           <div class="instruction-elements">
-            <img src="img/boot-foot-image-4.png" class="instruction-image" alt="Mide tu pie - Figura 4" />
+            <img src="{% static 'img/boot-foot-image-4.png' %}" class="instruction-image" alt="Mide tu pie - Figura 4" />
             <input type="text" class="instruction-input" name="name" placeholder="Ej. 33.5 cm">
           </div>
         </div>
@@ -156,7 +156,7 @@ Hacer pedido | Botas
             a) Tomar medida del dedo más largo al talón.
           </p>
           <div class="instruction-elements">
-            <img src="img/boot-foot-image-5.png" class="instruction-image" alt="Mide tu pie - Figura 5" />
+            <img src="{% static 'img/boot-foot-image-5.png' %}" class="instruction-image" alt="Mide tu pie - Figura 5" />
             <input type="text" class="instruction-input" name="name" placeholder="Ej. 26.5 cm">
           </div>
         </div>
