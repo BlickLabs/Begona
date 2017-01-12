@@ -74,9 +74,6 @@
       form.find('.form-message')
       .removeClass($('#contact-form').hasClass('success') ? 'success' : 'error')
       .html('');
-      form.find('select, input, textarea, button').attr('disabled', 'disabled');
-      form.find('.loader').css('display', 'block');
-      form.find('.form-message').html('aa');
     },
     submitHandler: function (form) {
       console.log($(form).serialize());
