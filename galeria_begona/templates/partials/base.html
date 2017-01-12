@@ -4,21 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     {% block meta %}{% endblock %}
-    <link rel="stylesheet" href="css/{{ projectName }}.libs.css">
+    <link rel="stylesheet" href="css/begona.libs.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>{% if section != 'index' %}{% block title %}{% endblock %} - {% endif %}Begoña Fernández</title>
   </head>
   <body class="theme">
     <div id="page">
-      {% include 'partials/navbar.njk' %}
+      {% include 'partials/navbar.html' %}
       <main>
         {% block content %}{% endblock %}
       </main>
-      {% include 'partials/footer.njk' %}
+      {% include 'partials/footer.html' %}
     </div>
-    <script src="js/{{ projectName }}.libs.js"></script>
-    <script src="js/{{ projectName }}.js"></script>
-
+    <script src="js/begona.libs.js"></script>
+    <script src="js/begona.js"></script>
   </body>
 </html>
