@@ -38,7 +38,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
     <ul class="mobmenu">
-            <li><a href="{{ index }}" title="Botas" class="{% if request.path == products %}active{% endif %}">botas</a></li>
+            <li><a href="{{ products }}" title="Botas" class="{% if request.path == products %}active{% endif %}">botas</a></li>
             <li><a href="{{ about }}" title="Acerca De Nosotros" class="{% if request.path == about %}active{% endif %}">acerca de nosotros</a></li>
             <li><a href="{{ products }}" title="Hacer Pedido" class="{% if request.path == boot or request.path == booty or request.path == chaps %}active{% endif %}">hacer pedido</a></li>
             <li><a href="{{ faq }}" class="{% if request.path == faq %}active{% endif %}" title="PREGUNTAS FRECUENTES">PREGUNTAS FRECUENTES</a></li>
