@@ -626,6 +626,7 @@
     margin 0 auto
     max-width 670px
     text-align right
+    position relative
     width 90%
 
     &.boot-form
@@ -660,7 +661,7 @@
       margin-top 16px
       text-align left
 
-    label
+    label:not(.error)
       color #4a4a4a
       flex-basis 162px
       font-weight normal
@@ -670,7 +671,6 @@
     .input-wrapper
       display flex
       flex-basis calc(100% - 185px)
-      flex-wrap wrap
       font-size 16px
       justify-content space-between
 
@@ -709,6 +709,7 @@
 
     .full-input
       flex-basis 100%
+      width 100%
 
     .first-name-input,
     .address-input,
@@ -728,3 +729,15 @@
 
     .initials-input
       height 86px
+
+    .form-message,
+    .begona-loader
+      text-align right
+      width 100%
+
+    .form-message
+      margin-top 35px
+
+    label.error
+      color #ff3636
+      font-size 0.8em

@@ -102,6 +102,13 @@
   .product-form-section
     margin-top 50px
 
+    .product-form
+      text-align center
+
+      .form-message,
+      .begona-loader
+        text-align center
+
     .section-title
       font-size 24px
 
@@ -334,7 +341,7 @@
         flex-wrap wrap
         font-size 13.5px
 
-      label
+      label:not(.error)
         flex-basis 100%
         text-align left
 
@@ -352,10 +359,11 @@
 @media screen and (max-width: 500px)
   .product-form-section
     .product-form
-      text-align center
-
       .input-row
         margin-top 20px
+
+      .input-wrapper
+        flex-wrap wrap
 
       .first-name-input,
       .last-name-input,

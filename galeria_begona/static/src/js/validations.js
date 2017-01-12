@@ -215,6 +215,9 @@
 
   $('#booties-form').validate({
     rules: {
+      name: {
+        required: true
+      },
       last_name: {
         required: true
       },
