@@ -170,60 +170,82 @@ Hacer pedido | Botas
     <div class="input-row">
       <label for="name">Nombre</label>
       <div class="input-wrapper">
-        <input type="text" id="name" class="first-name-input" name="name" placeholder="Nombre (s)">
-        <input type="text" id="last_name" class="last-name-input" name="last_name" placeholder="Apellidos">
+        <div class="first-name-input">
+          <input type="text" id="name" class="full-input" name="name" placeholder="Nombre (s)">
+        </div>
+        <div class="last-name-input">
+          <input type="text" id="last_name" class="full-input" name="last_name" placeholder="Apellidos">
+        </div>
       </div>
     </div>
     <div class="input-row">
       <label for="street_col">Dirección</label>
       <div class="input-wrapper">
-        <input type="text" id="street_col" class="address-input" name="street_col" placeholder="Calle, Col. Número">
-        <input type="text" id="state" class="country-input" name="state" placeholder="Estado">
-        <input type="text" id="cp" class="postal-code-input" name="cp" placeholder="C.P.">
+        <div class="address-input">
+          <input type="text" id="street_col" class="full-input" name="street_col" placeholder="Calle, Col. Número">
+        </div>
+        <div class="country-input">
+          <input type="text" id="state" class="full-input" name="state" placeholder="Estado">
+        </div>
+        <div class="postal-code-input">
+          <input type="text" id="cp" class="full-input" name="cp" placeholder="C.P.">
+        </div>
       </div>
     </div>
     <div class="input-row">
       <label for="email">Correo electrónico</label>
       <div class="input-wrapper">
-        <input type="email" id="email" class="full-input" name="email">
+        <div class="full-input">
+          <input type="email" id="email" class="full-input" name="email">
+        </div>
       </div>
     </div>
     <div class="input-row">
       <label for="number">Número de calzado mexicano</label>
       <div class="input-wrapper">
-        <input type="number" id="number" class="shoe-size-input" name="number" min="1" max="12" placeholder="Ej. 7">
+        <div class="shoe-size-input">
+          <input type="number" id="number" class="full-input" name="number" min="1" max="12" placeholder="Ej. 7">
+        </div>
       </div>
     </div>
     <div class="input-row">
       <label for="model">Modelo</label>
       <div class="input-wrapper">
-        <input type="text" disabled id="model" class="model" name="model">
+        <div class="shoe-size-input">
+          <input type="text" disabled id="model" class="full-input" name="model">
+        </div>
       </div>
     </div>
     <div class="input-row">
       <label for="color">Color de la piel</label>
       <div class="input-wrapper">
-        <select id="color" class="skin-input" name="color">
-          <option value="Negro">Negro</option>
-          <option value="Café">Café</option>
-          <option value="Camello">Camello</option>
-        </select>
+        <div class="shoe-size-input">
+          <select id="color" class="full-input" name="color">
+            <option value="Negro">Negro</option>
+            <option value="Café">Café</option>
+            <option value="Camello">Camello</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="input-row">
       <label for="element">Elemento</label>
       <div class="input-wrapper">
-        <select id="element" class="skin-input" name="element">
-          <option value="Portacicates">Portacicates</option>
-          <option value="Broche">Broche</option>
-          <option value="A los costados del cierre">A los costados del cierre</option>
-        </select>
+        <div class="shoe-size-input">
+          <select id="element" class="full-input" name="element">
+            <option value="Portacicates">Portacicates</option>
+            <option value="Broche">Broche</option>
+            <option value="A los costados del cierre">A los costados del cierre</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="input-row">
       <label for="description">Descripción de vestuario</label>
       <div class="input-wrapper">
-        <textarea id="description" class="full-input description-input" name="description" placeholder="Decir cómo estaban vestidos a la hora de que se tomaron las medidas. Lo ideal es que se midan con la ropa que usan para montar."></textarea>
+        <div class="full-input">
+          <textarea id="description" class="full-input description-input" name="description" placeholder="Decir cómo estaban vestidos a la hora de que se tomaron las medidas. Lo ideal es que se midan con la ropa que usan para montar."></textarea>
+        </div>
       </div>
     </div>
     <div class="form-message">
