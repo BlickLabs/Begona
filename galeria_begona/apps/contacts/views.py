@@ -99,7 +99,7 @@ class BootRequestView(View):
             return HttpResponse('0')
 
 
-class BootieRequest(View):
+class BootyRequest(View):
     def post(self, request):
         name = request.POST.get('name')
         last_name = request.POST.get('last_name')
@@ -136,7 +136,7 @@ class BootieRequest(View):
             return HttpResponse('0')
 
 
-class ShortRequest(View):
+class ChapsRequest(View):
     def post(self, request):
         hip_circ = request.POST.get('hip_circ')
         high_circ = request.POST.get('high_circ')

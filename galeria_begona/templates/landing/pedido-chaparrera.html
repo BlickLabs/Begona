@@ -9,7 +9,7 @@ Hacer pedido | Chaparreras
 {% endblock %}
 
 {% block content %}
-<form id="chaps-form" class="product-form-section" action="." method="post">
+<form id="chaps-form" class="product-form-section" action="{% url 'contact:chaps' %}" method="post">
   <h1 class="section-title">Hacer pedido</h1>
   <span class="subtitle chaps">¿Cómo sé mis medidas?</span>
   <span class="chaps-example-text">

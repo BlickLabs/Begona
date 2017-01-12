@@ -16,12 +16,12 @@ urlpatterns = [
         view=views.BootRequestView.as_view(),
         name='boot'),
 
-    url(regex=r'^bootie/$',
-        view=views.BootieRequest.as_view(),
-        name='boot'),
+    url(regex=r'^booty/$',
+        view=views.BootyRequest.as_view(),
+        name='booty'),
 
-    url(regex=r'^short/$',
-        view=views.BootieRequest.as_view(),
-        name='boot'),
+    url(regex=r'^chaps/$',
+        view=views.ChapsRequest.as_view(),
+        name='chaps'),
 
 ]

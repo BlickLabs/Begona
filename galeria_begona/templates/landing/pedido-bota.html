@@ -9,7 +9,7 @@ Hacer pedido | Botas
 {% endblock %}
 
 {% block content %}
-<div id="boots-form" class="product-form-section" action="." method="post">
+<div id="boots-form" class="product-form-section" action="{% url 'contact:boot' %}" method="post">
   <h1 class="section-title">Hacer pedido</h1>
   <span class="subtitle">¿Cómo sé mis medidas?</span>
 
