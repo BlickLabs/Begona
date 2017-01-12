@@ -17,34 +17,34 @@ Contacto
           <form id="contact-form" action="{% url 'contact:contact' %}" method="post">
             <div class="form-group">
               <div class="col-sm-6">
-                <label>Nombre</label>
+                <label for="name">Nombre</label>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-6">
-                <label>Correo electrónico</label>
-              </div>
-              <div class="col-sm-6">
-                <input type="email" class="form-control">
+                <input id="name" name="name" type="text" class="form-control">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-6">
-                <label>Dirección</label>
+                <label for="email">Correo electrónico</label>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="form-control">
+                <input id="email" name="email" type="email" class="form-control">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-6">
-                <label>Mensaje</label>
+                <label for="address">Dirección</label>
               </div>
               <div class="col-sm-6">
-                <textarea class="form-control mensaje-box" name="mensaje" rows="5"></textarea>
+                <input id="address" name="address" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-6">
+                <label for="message">Mensaje</label>
+              </div>
+              <div class="col-sm-6">
+                <textarea id="message" name="message" class="form-control mensaje-box" name="mensaje" rows="5"></textarea>
               </div>
             </div>
             <div class="row">

@@ -34,47 +34,47 @@ Hacer pedido | Botas
         <div class="input-row active">
           <span class="arrow"></span>
           <span class="circle">12</span>
-          <input type="text" name="name" placeholder="Ej. mide: 26 cm">
+          <input id="leg_circ_12" type="text" name="leg_circ_12" placeholder="Ej. mide: 26 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">16</span>
-          <input type="text" name="name" placeholder="Ej. mide: 27 cm">
+          <input id="leg_circ_16" type="text" name="leg_circ_16" placeholder="Ej. mide: 27 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">20</span>
-          <input type="text" name="name" placeholder="Ej. mide: 30 cm">
+          <input id="leg_circ_20" type="text" name="leg_circ_20" placeholder="Ej. mide: 30 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">24</span>
-          <input type="text" name="name" placeholder="Ej. mide: 32.5 cm">
+          <input id="leg_circ_24" type="text" name="leg_circ_24" placeholder="Ej. mide: 32.5 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">28</span>
-          <input type="text" name="name" placeholder="Ej. mide: 37.8 cm">
+          <input id="leg_circ_28" type="text" name="leg_circ_28" placeholder="Ej. mide: 37.8 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">32</span>
-          <input type="text" name="name" placeholder="Ej. mide: 40 cm">
+          <input id="leg_circ_32" type="text" name="leg_circ_32" placeholder="Ej. mide: 40 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">36</span>
-          <input type="text" name="name" placeholder="Ej. mide: 38 cm">
+          <input id="leg_circ_36" type="text" name="leg_circ_36" placeholder="Ej. mide: 38 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">40</span>
-          <input type="text" name="name" placeholder="Ej. mide: 36 cm">
+          <input id="leg_circ_40" type="text" name="leg_circ_40" placeholder="Ej. mide: 36 cm">
         </div>
         <div class="input-row">
           <span class="arrow"></span>
           <span class="circle">44</span>
-          <input type="text" name="name" placeholder="Ej. mide: 35 cm">
+          <input id="leg_circ_44" type="text" name="leg_circ_44" placeholder="Ej. mide: 35 cm">
         </div>
       </div>
       <span class="help-text-3">
@@ -98,7 +98,7 @@ Hacer pedido | Botas
           </p>
           <div class="instruction-elements">
             <img src="{% static 'img/boot-foot-image-1.png' %}" class="instruction-image" alt="Mide tu pie - Figura 1" />
-            <input type="text" class="instruction-input" name="name" placeholder="Ej. 22.5 cm">
+            <input id="finger_circ" type="text" class="instruction-input" name="finger_circ" placeholder="Ej. 22.5 cm">
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@ Hacer pedido | Botas
           </p>
           <div class="instruction-elements">
             <img src="{% static 'img/boot-foot-image-2.png' %}" class="instruction-image" alt="Mide tu pie - Figura 2" />
-            <input type="text" class="instruction-input" name="name" placeholder="Ej. 24.5 cm">
+            <input id="bone_finger_circ" type="text" class="instruction-input" name="bone_finger_circ" placeholder="Ej. 24.5 cm">
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@ Hacer pedido | Botas
           </p>
           <div class="instruction-elements">
             <img src="{% static 'img/boot-foot-image-3.png' %}" class="instruction-image" alt="Mide tu pie - Figura 3" />
-            <input type="text" class="instruction-input" name="name" placeholder="Ej. 25 cm">
+            <input id="instep_circ" type="text" class="instruction-input" name="instep_circ" placeholder="Ej. 25 cm">
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@ Hacer pedido | Botas
           </p>
           <div class="instruction-elements">
             <img src="{% static 'img/boot-foot-image-4.png' %}" class="instruction-image" alt="Mide tu pie - Figura 4" />
-            <input type="text" class="instruction-input" name="name" placeholder="Ej. 33.5 cm">
+            <input id="circ_heel_to_foot" type="text" class="instruction-input" name="circ_heel_to_foot" placeholder="Ej. 33.5 cm">
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@ Hacer pedido | Botas
           </p>
           <div class="instruction-elements">
             <img src="{% static 'img/boot-foot-image-5.png' %}" class="instruction-image" alt="Mide tu pie - Figura 5" />
-            <input type="text" class="instruction-input" name="name" placeholder="Ej. 26.5 cm">
+            <input id="circ_tip_to_hell" type="text" class="instruction-input" name="circ_tip_to_hell" placeholder="Ej. 26.5 cm">
           </div>
         </div>
       </div>
@@ -167,18 +167,18 @@ Hacer pedido | Botas
     <h2 class="step-title" data-number="3">Llena tus datos</h2>
     <span class="boot-form-legend">Si tienes medidas distintas en cada pierna anótalo en el campo de mensaje ya que es muy importante hacérnoslo saber</span>
     <div class="input-row">
-      <label for="first-name">Nombre</label>
+      <label for="name">Nombre</label>
       <div class="input-wrapper">
-        <input type="text" id="first-name" class="first-name-input" name="first-name" placeholder="Nombre (s)">
-        <input type="text" id="last-name" class="last-name-input" name="last-name" placeholder="Apellidos">
+        <input type="text" id="name" class="first-name-input" name="name" placeholder="Nombre (s)">
+        <input type="text" id="last_name" class="last-name-input" name="last_name" placeholder="Apellidos">
       </div>
     </div>
     <div class="input-row">
-      <label for="address">Dirección</label>
+      <label for="street_col">Dirección</label>
       <div class="input-wrapper">
-        <input type="text" id="address" class="address-input" name="address" placeholder="Calle, Col. Número">
-        <input type="text" id="country" class="country-input" name="country" placeholder="Estado">
-        <input type="text" id="postal-code" class="postal-code-input" name="postal-code" placeholder="C.P.">
+        <input type="text" id="street_col" class="address-input" name="street_col" placeholder="Calle, Col. Número">
+        <input type="text" id="state" class="country-input" name="state" placeholder="Estado">
+        <input type="text" id="cp" class="postal-code-input" name="cp" placeholder="C.P.">
       </div>
     </div>
     <div class="input-row">
@@ -188,21 +188,21 @@ Hacer pedido | Botas
       </div>
     </div>
     <div class="input-row">
-      <label for="shoe-size">Número de calzado mexicano</label>
+      <label for="number">Número de calzado mexicano</label>
       <div class="input-wrapper">
-        <input type="number" id="shoe-size" class="shoe-size-input" name="shoe-size" min="1" max="12" placeholder="Ej. 7">
+        <input type="number" id="number" class="shoe-size-input" name="number" min="1" max="12" placeholder="Ej. 7">
       </div>
     </div>
     <div class="input-row">
-      <label for="shoe-size">Modelo</label>
+      <label for="product-model">Modelo</label>
       <div class="input-wrapper">
-        <input type="text" disabled id="product-model" class="shoe-size-input" name="product-model">
+        <input type="text" disabled id="product-model" class="model" name="product-model">
       </div>
     </div>
     <div class="input-row">
-      <label for="skin-color">Color de la piel</label>
+      <label for="color">Color de la piel</label>
       <div class="input-wrapper">
-        <select id="skin-color" class="skin-input" name="skin-color">
+        <select id="color" class="skin-input" name="color">
           <option value="Negro">Negro</option>
           <option value="Café">Café</option>
           <option value="Camello">Camello</option>

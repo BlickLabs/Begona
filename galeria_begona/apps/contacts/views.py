@@ -51,6 +51,7 @@ class BootRequestView(View):
         name = request.POST.get('name')
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')
+        model = request.POST.get('model')
         number = request.POST.get('number')
         color = request.POST.get('color')
         element = request.POST.get('element')
@@ -78,6 +79,7 @@ class BootRequestView(View):
             'last_name' : last_name,
             'email' : email,
             'number' : number,
+            'model' : model,
             'color' : color,
             'element' : element,
             'description' : description,
@@ -107,6 +109,7 @@ class BootyRequest(View):
         state = request.POST.get('state')
         cp = request.POST.get('cp')
         email = request.POST.get('email')
+        model = request.POST.get('model')
         number = request.POST.get('number')
         color = request.POST.get('color')
         element = request.POST.get('element')
@@ -119,6 +122,7 @@ class BootyRequest(View):
             'cp': cp,
             'email': email,
             'number': number,
+            'model': model,
             'color': color,
             'element': element,
         }
@@ -149,6 +153,7 @@ class ChapsRequest(View):
         circ_12 = request.POST.get('circ_12')
         mouth_circ = request.POST.get('mouth_circ')
         name = request.POST.get('name')
+        model = request.POST.get('model')
         last_name = request.POST.get('last_name')
         street_col = request.POST.get('street_col')
         state = request.POST.get('state')
@@ -177,6 +182,7 @@ class ChapsRequest(View):
             'cp': cp,
             'email': email,
             'number': number,
+            'model': model,
             'color': color,
             'with_initials': with_initials,
             'initials': initials,
