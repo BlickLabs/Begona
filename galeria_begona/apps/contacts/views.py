@@ -2,12 +2,19 @@
 # -*- coding: utf-8 -*-
 from django.conf import settings
 from django.http import HttpResponse
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
 from galeria_begona.core.utils import send_email
 
 
 class ContactView(View):
-    def post(self, request):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(ContactView, self) \
+            .dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
         name = request.POST.get('name')
         email = request.POST.get('email')
         address = request.POST.get('address')
@@ -33,6 +40,11 @@ class ContactView(View):
 
 
 class BootRequestView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(BootRequestView, self) \
+            .dispatch(request, *args, **kwargs)
+
     def post(self, request):
         leg_circ_12 = request.POST.get('leg_circ_12')
         leg_circ_16 = request.POST.get('leg_circ_16')
@@ -102,6 +114,11 @@ class BootRequestView(View):
 
 
 class BootyRequest(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(BootyRequest, self) \
+            .dispatch(request, *args, **kwargs)
+
     def post(self, request):
         name = request.POST.get('name')
         last_name = request.POST.get('last_name')
@@ -141,6 +158,11 @@ class BootyRequest(View):
 
 
 class ChapsRequest(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(ChapsRequest, self) \
+            .dispatch(request, *args, **kwargs)
+    
     def post(self, request):
         hip_circ = request.POST.get('hip_circ')
         high_circ = request.POST.get('high_circ')
