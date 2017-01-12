@@ -1,0 +1,730 @@
+.product-form-section
+  padding-top 57px
+  margin-bottom 79px
+  margin-top 114px
+
+  @media mobile
+    margin-top 71px
+
+  .section-title
+    font-family 'Myriad Pro'
+    font-size 30px
+    font-weight $light
+    margin 0 auto
+    text-align center
+    width 90%
+
+  .subtitle
+    color #4a4a4a
+    display block
+    font-family 'Gotham Rounded'
+    font-size 21px
+    font-weight 500
+    margin 0 auto
+    margin-top 5px
+    text-align center
+    width 90%
+
+    &.chaps
+      margin-top 0.6em
+
+  .selection-buttons
+    margin 30px auto 55px auto
+    display flex
+    max-width 420px
+    justify-content space-around
+    flex-wrap wrap
+    font-size 18px
+
+    a
+      background #e5e5e5
+      border-radius 1.5em
+      color #4a4a4a
+      margin 0.5em 0
+      font-weight bold
+      padding 0.8em 1.5em 0.6em 1.5em
+      line-height 1
+
+      &:hover,
+      &.active
+        background #feebc3
+
+  .step-title,
+  .form-title
+    color #abc9d3
+    font-family 'Gotham Rounded'
+    font-size 30px
+    font-weight 500
+    margin 0 auto
+    text-align center
+    width 90%
+
+  .step-title::before
+    background #abc9d3
+    border-radius 50%
+    color white
+    content attr(data-number)
+    display inline-block
+    font-size 34px
+    font-weight bold
+    height 50px
+    margin-right 11px
+    text-align center
+    vertical-align baseline
+    padding 0.25em 0.1em
+    width 50px
+
+  .boot-example-text,
+  .chaps-example-text
+    color #9b9b9b
+    display block
+    font-family 'Gotham Rounded Book'
+    font-style italic
+    margin 0 auto
+    text-align center
+    width 90%
+
+  .boot-example-text
+    font-size 24px
+    margin-top 2.5em
+
+  .chaps-example-text
+    font-size 18px
+    line-height 1.1
+    margin-top 2.2em
+
+  .boot-example-image
+    display block
+    margin 38px auto 125px auto
+    max-width 570px
+    width 90%
+
+  .step-instructions
+    color #9b9b9b
+    font-family 'Gotham Rounded'
+    font-size 21px
+    line-height 1.1
+    margin 0 auto
+    width 90%
+
+    &::before
+      color #4a4a4a
+      content 'Instrucciones: '
+
+    &.small
+      font-size 16px
+
+    &.boots-1
+      margin-top 17px
+      max-width 646px
+
+    &.boots-2
+      margin-top 7px
+      max-width 552px
+
+    &.chaps
+      margin-top 0.7em
+      max-width 653px
+
+  .product-form-alert
+    border solid 3px #feebc3
+    font-family 'Gotham Rounded'
+    line-height 1.15
+    margin 0 auto
+    padding 1em
+    text-align center
+    width 90%
+
+    &.boots
+      color #575656
+      font-weight 500
+      font-size 15px
+      margin-bottom 2.1em
+      margin-top 1.4666em
+      max-width 391px
+
+    &.chaps
+      color #9b9b9b
+      font-family 'Gotham Rounded Book'
+      font-size 18px
+      margin-bottom 3.6em
+      margin-top 2em
+      max-width 645px
+      padding 1.8em 3em 1.5em 3em
+
+  .boot-step-1-content
+    margin 0 auto
+    margin-bottom 200px
+    padding-right 150px
+    text-align center
+    position relative
+    width 680px
+
+    img
+      width 390px
+
+    .help-text
+      color #9b9b9b
+      display block
+      font-family 'Gotham Rounded Book'
+      line-height 1
+      position absolute
+
+      &.help-text-1
+        font-size 15px
+        left 0
+        text-align left
+        top 40px
+        width 143px
+
+      &.help-text-2
+        font-size 13px
+        right 0
+        text-align right
+        top 75px
+        width 162px
+
+    .help-text-3
+      bottom 70px
+      color #4a4a4a
+      display block
+      font-family 'Gotham Rounded'
+      font-size 21px
+      right 75px
+      position absolute
+
+      img
+        margin-right 8px
+        margin-top 7px
+        width 110px
+
+    .help-line
+      display block
+      height 371px
+      left 67px
+      position absolute
+      top 168px
+      width 36px
+
+      &::before, &::after
+        background #979797
+        content ' '
+        display block
+        height 1px
+        transform translateX(-49.5%)
+        width 36px
+
+      span
+        background #979797
+        display block
+        height 100%
+        width 1px
+
+    .inputs-div
+      display flex
+      flex-direction column-reverse
+      flex-wrap wrap
+      position absolute
+      right 180px
+      top 158px
+      width 340px
+
+    .input-row
+      margin-top 5px
+      flex-basis 100%
+
+      &.active
+        .arrow::before
+          border-left solid 3px #e2afac
+          border-top solid 3px #e2afac
+
+        .arrow::after
+          background #e2afac
+          height 3px
+          transform translateY(-5.75px)
+
+        .circle
+          background #e2afac
+          color white
+
+        input
+          border solid 2px #e2afac
+
+    .arrow
+      display inline-block
+      vertical-align middle
+
+      &::before
+        content ' '
+        display block
+        border-left solid 1px #979797
+        border-top solid 1px #979797
+        height 9px
+        transform rotate(-45deg)
+        width 9px
+
+      &::after
+        background #979797
+        content ' '
+        display block
+        height 1px
+        width 143px
+        transform translateY(-5px)
+
+    .circle
+      background #d8d8d8
+      border-radius 50%
+      color #9b9b9b
+      display inline-block
+      font-family 'Gotham Rounded'
+      font-size 9px
+      height 26px
+      line-height 1
+      margin-left -5px
+      padding 8.5px 0
+      position relative
+      text-align center
+      vertical-align middle
+      width 26px
+
+      &::after
+        color #4a4a4a
+        content 'cm'
+        margin-left 12px
+        position absolute
+
+    input
+      border solid 0.6px #979797
+      color #979797
+      display inline-block
+      font-family 'Gotham Rounded Book'
+      font-size 10px
+      margin-left 32px
+      padding 0.3em 1em
+      outline none
+      width 100px
+
+      &::placeholder
+        color #e5e5e5
+
+  .boot-foot-divider
+    margin 0 auto
+    max-width 368px
+    width 70%
+
+    &.first
+      margin-bottom 34px
+      margin-top 70px
+
+    &.second
+      margin-bottom 56px
+      margin-top 34px
+
+  .boot-foot-instructions
+    display flex
+    font-family 'Gotham Rounded'
+    flex-wrap wrap
+    font-size 18px
+    justify-content space-between
+    margin 0 auto
+    max-width 1030px
+    width 90%
+
+    &:first-of-type
+      margin-top 7.8em
+
+      .instruction-image,
+      .instruction-input
+        vertical-align top
+
+    &:last-of-type
+      margin-bottom 5em
+
+    .instruction
+      align-items flex-start
+      color #9b9b9b
+      display flex
+      flex-basis 48%
+      justify-content space-between
+
+      &::before
+        background #e5e5e5
+        border-radius 50%
+        content attr(data-number)
+        color white
+        display inline-block
+        font-size 30px
+        height 1.99em
+        line-height 1
+        margin-top 0.8em
+        text-align center
+        padding 0.53em 0
+        flex-basis 1.99em
+
+      &.active
+        color #4a4a4a
+
+        &::before
+          background #e2afac
+
+        .instruction-title
+          color #e2afac
+
+        .instruction-input
+          border solid 3px #e2afac
+
+        .instruction-image
+          opacity 1
+
+    .instruction-title
+      text-transform uppercase
+
+    .instruction-text
+      line-height 1.15
+
+    .instruction-content
+      flex-basis calc(100% - 100px)
+
+    .instruction-elements
+      margin-top 20px
+
+    .instruction-image,
+    .instruction-input
+      display inline-block
+      vertical-align bottom
+
+    .instruction-image
+      height 130px
+      opacity 0.21
+
+    .instruction-input
+      border solid 1px #9b9b9b
+      font-family 'Gotham Rounded Book'
+      font-size 15px
+      line-height 1
+      margin-left 40px
+      outline none
+      padding 1em 0.4em
+      width 100px
+
+    .step-instructions
+      flex-basis 50%
+      font-family 'Gotham Rounded Book'
+      font-style italic
+      margin 0
+      max-width 324px
+
+      &::before
+        color inherit
+        font-family 'Gotham Rounded'
+
+  .boot-form-legend
+    color #4a4a4a
+    display inline-block
+    font-size 15px
+    line-height 1.1
+    margin-bottom 1em
+    margin-top 2.5em
+    text-align left
+    width calc(100% - 185px)
+
+  .chaps-example-content,
+  .chaps-step-1-content
+    margin 0 auto
+    margin-top 45px
+    max-width 910px
+    min-height 540px
+    padding-right 40px
+    position relative
+    text-align center
+
+    img
+      width 245px
+
+      &.show-on-mobile
+        display none
+
+  .chaps-step-1-help
+    color #4a4a4a
+    font-family 'Gotham Rounded'
+    font-size 21px
+    margin 0 auto
+    margin-top 35px
+    max-width 770px
+    text-align right
+    width 90%
+
+    img
+      display inline-block
+      margin-right 7px
+      margin-top 10px
+      vertical-align top
+
+  .chaps-example-content
+    [data-number="2"]
+      left -151%
+
+  .chaps-step-1-content
+    margin-top 0
+
+    .leg-parts-div
+      right 90px
+
+      [data-number="1"] .leg-part-description
+        margin-top 10px
+
+      [data-number="2"]
+        left -202%
+
+      [data-number="3"]
+        margin-top 35px
+
+      [data-number="4"]
+        margin-top 15px
+
+      [data-number="5"]
+        margin-top 8px
+
+        .leg-part-description
+          margin-top 13px
+
+      [data-number="6"]
+        margin-top 15px
+
+      [data-number="7"]
+        margin-top 10px
+
+        &::before
+          margin-top -16px
+          margin-left -3px
+
+        .leg-part-description
+          margin-top 10px
+
+    .leg-part-description
+      color #cecdce
+
+      span
+        display inline-block
+        margin-right 18px
+        width 37px
+
+      div:not(:first-child)
+        margin-top 3px
+
+  .leg-parts-div
+    position absolute
+    top 2px
+    right 0
+
+    [data-number="1"]::before
+      margin-top 3px
+
+    [data-number="3"]
+      margin-top 8px
+
+    [data-number="4"]
+      margin-top 1px
+
+    [data-number="5"]
+      margin-top 5px
+
+    [data-number="6"],
+    [data-number="7"]
+      &::before
+        margin-top -12px
+
+    [data-number="6"]
+      margin-top 8px
+
+    [data-number="7"]
+      margin-top 15px
+
+  .leg-part-wrapper
+    align-items flex-start
+    display flex
+    font-family 'Gotham Rounded'
+    line-height 1.1
+    text-align left
+
+    &::before
+      background #cecdce
+      border-radius 50%
+      color white
+      content attr(data-number)
+      display inline-block
+      font-size 25px
+      height 43px
+      line-height 1
+      margin-right 16px
+      padding 0.4em
+      text-align center
+      width 43px
+
+    &[data-number="2"]
+      flex-direction row-reverse
+      position absolute
+      text-align right
+      top 88px
+
+      .leg-part-content
+        width 229px
+
+      &::before
+        margin-left 24px
+        margin-right 0
+        margin-top -15px
+
+    input
+      border solid 2px #cecdce
+      color #888
+      outline none
+      padding 0.7em 1.3em
+      width 210px
+
+      &::placeholder
+        color #e5e5e5
+
+    &[data-number="6"] input
+      border-width 1px
+      padding 0.3em 0.5em
+      width 75px
+
+  .leg-part-title
+    color #cecece
+    font-size 18px
+    text-transform uppercase
+
+  .leg-part-wrapper.active
+    .leg-part-title
+      color #e2afac
+
+    input
+      border solid 2px #e2afac
+
+    &[data-number="6"] input:not(.active)
+      border solid 1px #cecdce
+
+    &::before
+      background #e2afac
+
+  .leg-part-content
+    max-width 301px
+
+  .leg-part-description
+    color #9b9b9b
+    font-family 'Gotham Rounded Book'
+    font-size 13px
+    margin-top 5px
+
+  ul.leg-part-description
+    font-size 11px
+
+  .product-form
+    font-family 'Gotham Rounded Book'
+    font-size 18px
+    margin 0 auto
+    max-width 670px
+    text-align right
+    width 90%
+
+    &.boot-form
+      border-top solid 1px #e5e5e5
+
+      .step-title
+        padding-top 1.6em
+
+    &.booty-form .form-title
+      padding-top 67px
+      padding-bottom 41px
+
+    &.chaps-form
+      margin-bottom 200px
+      margin-top 100px
+
+    .chaps-form-legend
+      color #9b9b9b
+      display block
+      font-family 'Gotham Rounded'
+      font-size 16px
+      line-height 1.15
+      margin 1em auto 2.6em auto
+      max-width 615px
+      text-align center
+      width 90%
+
+    .input-row
+      align-items center
+      display flex
+      justify-content space-between
+      margin-top 16px
+      text-align left
+
+    label
+      color #4a4a4a
+      flex-basis 162px
+      font-weight normal
+      line-height 1.1
+      text-align right
+
+    .input-wrapper
+      display flex
+      flex-basis calc(100% - 185px)
+      flex-wrap wrap
+      font-size 16px
+      justify-content space-between
+
+    input,
+    textarea,
+    select
+      border solid 1px #e5e5e5
+      color #4a4a4a
+      line-height 1
+      padding 1em
+      outline none
+
+      &::placeholder
+        color #9b9b9b
+
+    select
+      background #f5f5f5
+
+    textarea
+      resize none
+
+    button
+      background #abc9d3
+      border none
+      color white
+      font-family 'Gotham Rounded'
+      line-height 1
+      margin-top 2.3em
+      padding 1em 2em
+      outline none
+
+      &:hover,
+      &:active,
+      &:focus
+        background lightness(#abc9d3, 60%)
+
+    .full-input
+      flex-basis 100%
+
+    .first-name-input,
+    .address-input,
+    .country-input,
+    .shoe-size-input,
+    .skin-input
+      width 40%
+
+    .last-name-input
+      width 57.5%
+
+    .postal-code-input
+      width 15%
+
+    .description-input
+      height 128px
+
+    .initials-input
+      height 86px

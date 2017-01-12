@@ -1,0 +1,72 @@
+
+{% extends "partials/base.njk" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+Hacer pedido | Botines
+{% endblock %}
+
+{% block content %}
+<form id="booties-form" class="product-form-section" action="." method="post">
+  <h1 class="section-title">Hacer pedido</h1>
+  <div class="product-form booty-form">
+    <h2 class="form-title">Llena tus datos</h2>
+    <div class="input-row">
+      <label for="first-name">Nombre</label>
+      <div class="input-wrapper">
+        <input type="text" id="first-name" class="first-name-input" name="first-name" placeholder="Nombre (s)">
+        <input type="text" id="last-name" class="last-name-input" name="last-name" placeholder="Apellidos">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="address">Dirección</label>
+      <div class="input-wrapper">
+        <input type="text" id="address" class="address-input" name="address" placeholder="Calle, Col. Número">
+        <input type="text" id="country" class="country-input" name="country" placeholder="Estado">
+        <input type="text" id="postal-code" class="postal-code-input" name="postal-code" placeholder="C.P.">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="email">Correo electrónico</label>
+      <div class="input-wrapper">
+        <input type="email" id="email" class="full-input" name="email">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="shoe-size">Número de calzado mexicano</label>
+      <div class="input-wrapper">
+        <input type="number" id="shoe-size" class="shoe-size-input" name="shoe-size" min="1" max="12" placeholder="Ej. 7">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="shoe-size">Modelo</label>
+      <div class="input-wrapper">
+        <input type="text" disabled id="product-model" class="shoe-size-input" name="product-model">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="skin-color">Color de la piel</label>
+      <div class="input-wrapper">
+        <select id="skin-color" class="skin-input" name="skin-color">
+          <option value="Negro">Negro</option>
+          <option value="Café">Café</option>
+          <option value="Camello">Camello</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="element">Elemento</label>
+      <div class="input-wrapper">
+        <select id="element" class="skin-input" name="element">
+          <option value="Portacicates">Portacicates</option>
+          <option value="Broche">Broche</option>
+          <option value="A los costados del cierre">A los costados del cierre</option>
+        </select>
+      </div>
+    </div>
+    <button type="sumbit" name="send">Hacer pedido</button>
+  </div>
+</form>
+{% endblock %}

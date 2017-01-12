@@ -1,0 +1,71 @@
+{% extends "partials/base.njk" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+Galería
+{% endblock %}
+
+{% block content %}
+<!--Galería-->
+
+<!--Galería-->
+<div class="container mt">
+<div class="gallery">
+<h2 class="inner-heading">Galería</h2>
+<div class="galería-inner">
+<div class="row">
+  <div class="col-sm-4 spacer">
+    <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="0"> <img src="img/galeria/gallery1.png" class="img-responsive" alt="Gallery" /></a> </div>
+  </div>
+  <div class="col-sm-4 spacer">
+    <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="1"> <img src="img/galeria/gallery2.png" class="img-responsive" alt="Gallery" /></a> </div>
+  </div>
+  <div class="col-sm-4 spacer">
+    <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="2"> <img src="img/galeria/gallery3.png" class="img-responsive" alt="Gallery" /></a> </div>
+  </div>
+  <div class="col-sm-4 spacer">
+    <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="3"> <img src="img/galeria/gallery4.png" class="img-responsive" alt="Gallery" /></a> </div>
+  </div>
+  <div class="col-sm-4 spacer">
+    <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="4"> <img src="img/galeria/gallery5.png" class="img-responsive" alt="Gallery" /></a> </div>
+  </div>
+  <div class="col-sm-4 spacer">
+    <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="5"> <img src="img/galeria/gallery6.png" class="img-responsive" alt="Gallery" /></a> </div>
+  </div>
+</div>
+
+<!-- Gallery-1 -->
+<div class="modal fade" id="galleryOne" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+  <div class="modal-dialog new-model" role="document">
+    <div class="modal-content">
+      <div class="modal-body ">
+        <div class="row">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="img/close.png" /></span></button>
+          <div class="col-xs-12" id="slider">
+            <!-- Top part of the slider -->
+            <div class="row">
+              <div class="col-sm-12" id="carousel-bounding-box">
+                <div class="carousel slide" id="myCarousel" data-interval="false">
+                  <!-- Carousel items -->
+                  <div class="carousel-inner">
+                    <div class="active item" data-slide-number="0"> <img src="img/galeria/large/gallery1.jpg"></div>
+                    <div class="item" data-slide-number="1"> <img src="img/galeria/large/gallery2.jpg"></div>
+                    <div class="item" data-slide-number="2"> <img src="img/galeria/large/gallery3.jpg"></div>
+                    <div class="item" data-slide-number="3"> <img src="img/galeria/large/gallery4.jpg"></div>
+                    <div class="item" data-slide-number="4"> <img src="img/galeria/large/gallery5.jpg"></div>
+                    <div class="item" data-slide-number="5"> <img src="img/galeria/large/gallery6.jpg"></div>
+                  </div>
+                  <!-- Carousel nav -->
+
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon-chevron-left"><img src="img/left-arrow.png" /></span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon-chevron-right"><img src="img/right-arrow.png" /></span> </a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

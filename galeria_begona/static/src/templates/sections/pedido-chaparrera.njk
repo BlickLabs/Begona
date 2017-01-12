@@ -1,0 +1,245 @@
+
+{% extends "partials/base.njk" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+Hacer pedido | Chaparreras
+{% endblock %}
+
+{% block content %}
+<form id="chaps-form" class="product-form-section" action="." method="post">
+  <h1 class="section-title">Hacer pedido</h1>
+  <span class="subtitle chaps">¿Cómo sé mis medidas?</span>
+  <span class="chaps-example-text">
+    Ejemplo de una pierna.<br>
+    Tomar medidas estando de pie con Con botín y pantalón de montar.
+  </span>
+  <div class="chaps-example-content">
+    <img class="show-on-mobile" src="img/chaps-foot-mobile.png" alt="Imagen de pierna" />
+    <img src="img/chaps-foot.png" alt="Imagen de pierna" />
+    <div class="leg-parts-div">
+      <div class="leg-part-wrapper active" data-number="1">
+        <div class="leg-part-content">
+          <span class="leg-part-title">Cadera</span>
+          <p class="leg-part-description">
+            Dar medida de Circunferencia de cadera de hueso a hueso
+            y dar medida desde ese punto hacia el piso (así tenemos
+            la medida de la cadera y la altura a la que está)
+          </p>
+        </div>
+      </div>
+      <div class="leg-part-wrapper active" data-number="2">
+        <div class="leg-part-content">
+          <span class="leg-part-title">Parte alta</span>
+          <p class="leg-part-description">
+            Dar medida de circunferencia de dónde hace
+            compás la pierna al abrir (casi rozando la ingle)
+            y dar medida de ese punto hacia el piso
+          </p>
+        </div>
+      </div>
+      <div class="leg-part-wrapper active" data-number="3">
+        <div class="leg-part-content">
+          <span class="leg-part-title">Parte media</span>
+          <p class="leg-part-description">
+            Dar medida de circunferencia de la mitad del muslo
+            (entre rodilla e ingle, justo a la mitad) y dar
+            medida de ese punto hacia el piso
+          </p>
+        </div>
+      </div>
+      <div class="leg-part-wrapper active" data-number="4">
+        <div class="leg-part-content">
+          <span class="leg-part-title">Parte baja</span>
+          <p class="leg-part-description">
+            Dar medida de circunferencia de arriba de la
+            rodilla y dar medida de ese punto hacia el piso
+          </p>
+        </div>
+      </div>
+      <div class="leg-part-wrapper active" data-number="5">
+        <div class="leg-part-content">
+          <span class="leg-part-title">Pantorrilla</span>
+          <p class="leg-part-description">
+            Dar medida de circunferencia de la parte más
+            ancha de la pantorrilla y dar medida de ese punto hacia el piso
+          </p>
+        </div>
+      </div>
+      <div class="leg-part-wrapper active" data-number="6">
+        <div class="leg-part-content">
+          <span class="leg-part-title">Circunferencias</span>
+          <ul class="leg-part-description">
+            <li><strong>a)</strong> Dar medida Del piso hacia arriba a la altura de 27cm tomar circunferencia</li>
+            <li><strong>b)</strong> Dar medida Del piso hacia arriba a la altura de 22cm tomar circunferencia</li>
+            <li><strong>c)</strong> Dar medida Del piso hacia arriba a la altura de 17cm tomar circunferencia</li>
+            <li><strong>d)</strong> Dar medida Del piso hacia arriba a la altura de 12cm tomar circunferencia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="leg-part-wrapper active" data-number="7">
+        <div class="leg-part-content">
+          <span class="leg-part-title">Boca del botín</span>
+          <p class="leg-part-description">
+            Dar medida de la boca del botín (hoyo por dónde
+            entra el pie al botín) para dar espacio a la
+            chaparrera para que embone bien
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="product-form-alert chaps">
+    Todas las medidas después de tomar la circunferencia
+    se miden hacia abajo al TALÓN del botín,
+    (No lo agreguen a la medida el talón del botín)
+  </p>
+  <div class="product-form-step">
+    <h2 class="step-title" data-number="1">Mide tu pierna</h2>
+    <p class="step-instructions chaps">
+      Ve siguiendo los pasos y llenando los campos con tus medidas.
+    </p>
+    <div class="chaps-step-1-help">
+      <img src="img/chaps-arrow.png" alt="Flecha" />
+      Empieza aquí
+    </div>
+    <div class="chaps-step-1-content">
+      <img src="img/chaps-foot.png" alt="Imagen de pierna" />
+      <div class="leg-parts-div">
+        <div class="leg-part-wrapper active" data-number="1">
+          <div class="leg-part-content">
+            <span class="leg-part-title">Cadera</span>
+            <div class="leg-part-description">
+              <input type="text" name="name" placeholder="Ej. Mide 90 cm">
+            </div>
+          </div>
+        </div>
+        <div class="leg-part-wrapper part-2" data-number="2">
+          <div class="leg-part-content">
+            <span class="leg-part-title">Parte alta</span>
+            <div class="leg-part-description">
+              <input type="text" name="name" placeholder="Ej. Mide 90 cm">
+            </div>
+          </div>
+        </div>
+        <div class="leg-part-wrapper" data-number="3">
+          <div class="leg-part-content">
+            <span class="leg-part-title">Parte media</span>
+            <div class="leg-part-description">
+              <input type="text" name="name" placeholder="Ej. Mide 90 cm">
+            </div>
+          </div>
+        </div>
+        <div class="leg-part-wrapper" data-number="4">
+          <div class="leg-part-content">
+            <span class="leg-part-title">Parte baja</span>
+            <div class="leg-part-description">
+              <input type="text" name="name" placeholder="Ej. Mide 90 cm">
+            </div>
+          </div>
+        </div>
+        <div class="leg-part-wrapper" data-number="5">
+          <div class="leg-part-content">
+            <span class="leg-part-title">Pantorrilla</span>
+            <div class="leg-part-description">
+              <input type="text" name="name" placeholder="Ej. Mide 90 cm">
+            </div>
+          </div>
+        </div>
+        <div class="leg-part-wrapper" data-number="6">
+          <div class="leg-part-content">
+            <span class="leg-part-title">Circunferencias</span>
+            <div class="leg-part-description">
+              <div>
+                <span>27cm</span><input type="text" name="name">
+              </div>
+              <div>
+                <span>22cm</span><input type="text" name="name">
+              </div>
+              <div>
+                <span>17cm</span><input type="text" name="name">
+              </div>
+              <div>
+                <span>12cm</span><input type="text" name="name">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="leg-part-wrapper" data-number="7">
+          <div class="leg-part-content">
+            <span class="leg-part-title">Boca del botín</span>
+            <div class="leg-part-description">
+              <input type="text" name="name" placeholder="Ej. Mide 90 cm">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-form chaps-form">
+    <h2 class="form-title">Llena tus datos</h2>
+    <span class="chaps-form-legend">Características generales de las chaparreras: Por la parte de afuera de la pierna lleva el cierre y lleva un resorte para que queden más pegadas </span>
+    <div class="input-row">
+      <label for="first-name">Nombre</label>
+      <div class="input-wrapper">
+        <input type="text" id="first-name" class="first-name-input" name="first-name" placeholder="Nombre (s)">
+        <input type="text" id="last-name" class="last-name-input" name="last-name" placeholder="Apellidos">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="address">Dirección</label>
+      <div class="input-wrapper">
+        <input type="text" id="address" class="address-input" name="address" placeholder="Calle, Col. Número">
+        <input type="text" id="country" class="country-input" name="country" placeholder="Estado">
+        <input type="text" id="postal-code" class="postal-code-input" name="postal-code" placeholder="C.P.">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="email">Correo electrónico</label>
+      <div class="input-wrapper">
+        <input type="email" id="email" class="full-input" name="email">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="shoe-size">Número de calzado mexicano</label>
+      <div class="input-wrapper">
+        <input type="number" id="shoe-size" class="shoe-size-input" name="shoe-size" min="1" max="12" placeholder="Ej. 7">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="shoe-size">Modelo</label>
+      <div class="input-wrapper">
+        <input type="text" disabled id="product-model" class="shoe-size-input" name="product-model">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="skin-color">Color de la piel</label>
+      <div class="input-wrapper">
+        <select id="skin-color" class="skin-input" name="skin-color">
+          <option value="Negro">Negro</option>
+          <option value="Café">Café</option>
+          <option value="Camello">Camello</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="initials">Con iniciales</label>
+      <div class="input-wrapper">
+        <select id="initials" class="skin-input" name="initials">
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="description">¿Qué iniciales?</label>
+      <div class="input-wrapper">
+        <textarea id="description" class="full-input initials-input" name="description" placeholder="Ej. AI"></textarea>
+      </div>
+    </div>
+    <button type="sumbit" name="send">Hacer pedido</button>
+  </div>
+</form>
+{% endblock %}

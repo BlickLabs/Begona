@@ -1,0 +1,373 @@
+@media screen and (max-width: 1100px)
+  .product-form-section
+    .boot-foot-instructions
+      width 94%
+
+      .instruction-content
+        flex-basis calc(100% - 85px)
+
+@media screen and (max-width: 1023px)
+  .product-form-section
+    .chaps-example-content,
+    .chaps-step-1-content
+      padding-right 80px
+      max-width 768px
+
+    .leg-parts-div,
+    .chaps-step-1-content
+      .leg-parts-div
+        right 35px
+        top 7px
+
+    .chaps-step-1-content .leg-part-wrapper
+      &[data-number="4"]
+        margin-top 30px
+
+      &[data-number="6"]
+        margin-top 20px
+
+      &[data-number="7"]
+        margin-top 25px
+
+        &::before
+          margin-left 0
+          margin-top -10px
+
+    .leg-part-wrapper
+      &::before
+        font-size 20px
+        height 37px
+        width 37px
+
+      &[data-number="3"]
+        margin-top 2px
+
+      &[data-number="2"]
+        flex-wrap wrap
+        right 190%
+
+        .leg-part-content
+          flex-basis 100%
+
+        &::before
+          margin-bottom 12px
+          margin-left 0
+          margin-top 0
+
+      input
+        width 170px
+
+    .leg-part-title
+      font-size 15px
+
+    .leg-part-content
+      width 220px
+
+    .leg-part-description
+      font-size 11px
+
+    .boot-step-1-content
+      margin-bottom 120px
+
+    .boot-foot-instructions
+      width 680px
+
+      &:first-of-type
+        margin-top 90px
+
+      .instruction
+        flex-basis 100%
+
+        &:nth-child(2)
+          margin-top 50px
+
+      .instruction-elements
+        text-align center
+
+      .step-instructions
+        flex-basis 100%
+        max-width initial
+
+    .product-form .boot-form-legend
+      display block
+      margin-bottom 40px
+      margin-left auto
+      margin-right auto
+      max-width 450px
+      min-width 300px
+      text-align center
+      width 85%
+
+@media screen and (max-width: 767px)
+  .product-form-section
+    margin-top 50px
+
+    .section-title
+      font-size 24px
+
+    .subtitle
+      font-size 18px
+
+    .form-title,
+    .step-title
+      font-size 24px
+
+    .step-title::before
+      font-size 19px
+      height 28px
+      width 28px
+
+    .step-instructions:not(.small)
+      font-size 16px !important
+      text-align center
+
+    .chaps-example-text
+      font-size 15px
+
+    .boot-example-text
+      font-size 18px
+      margin-top 2em
+
+    .boot-example-image
+      margin-bottom 50px
+
+    .product-form-alert
+      &.chaps
+        font-size 14px
+        padding 1.3em
+
+    .boot-step-1-content
+      margin-bottom 70px
+      min-height initial
+      padding-right 0
+      width 100%
+
+      img,
+      .help-line,
+      .help-text-3
+        display none
+
+      .inputs-div,
+      .help-text.help-text-1,
+      .help-text.help-text-2
+        bottom initial
+        left initial
+        position relative
+        right initial
+        top initial
+
+      .help-text.help-text-1,
+      .help-text.help-text-2
+        display block
+        font-size 14px
+        margin 0 auto
+        text-align center
+        width 80%
+
+      .help-text.help-text-2
+        margin 1.2em auto
+
+      .inputs-div
+        flex-direction column
+        margin 0 auto
+
+      .arrow
+        display none
+
+      .circle
+        font-size 14px
+        height 2.2em
+        padding-top 0.65em
+        width 2.2em
+
+        &::before
+          margin-left 0
+
+      .input-row
+        margin-top 12px
+
+      input
+        font-size 14px
+        margin-left 35px
+        padding 0.5em 0.8em
+        width 200px
+
+    .boot-foot-instructions
+      width 90%
+
+      &:first-of-type
+        margin-top 0
+
+      &:last-of-type
+        margin-bottom 4em
+
+      .step-instructions
+        font-size 14px
+        margin-top 40px
+
+      .instruction
+        margin-top 38px !important
+
+        &::before
+          font-size 20px
+          height 2em
+          margin-top 0
+          width 2em
+
+      .instruction-content
+        margin-top 10px
+        flex-basis calc(100% - 60px)
+
+      .instruction-title
+        display block
+        font-size 16px
+
+      .instruction-text
+        font-size 14px
+        margin-top 15px
+
+      .instruction-elements
+        align-items center
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        margin 0 auto
+        margin-top 15px
+        max-width 340px
+
+      .instruction-image
+        height 100px
+
+      .instruction-input
+        margin 13px 0
+        width 140px
+
+    .boot-foot-divider
+      display none
+
+    .chaps-example-content,
+    .chaps-step-1-content
+      padding-right 0
+
+      img:not(.show-on-mobile)
+        display none
+
+      img.show-on-mobile
+        display inline-block
+
+    .chaps-step-1-content
+      .leg-part-wrapper
+        margin-top 23px !important
+
+        &[data-number="6"] .leg-part-content
+          div
+            margin-top 10px
+
+          input
+            margin-top 0.3em
+            padding .7em 1.3em
+            width 100%
+
+            &:not(.active)
+              border 2px solid #cecdce
+
+    .leg-parts-div
+      margin 0 auto
+      margin-top 40px
+      width 273px
+      position relative !important
+      right initial !important
+      top initial !important
+
+      [data-number="2"]
+        flex-wrap nowrap
+        flex-direction row
+        position relative !important
+        left initial !important
+        right initial !important
+        text-align left
+        top initial !important
+
+        &::before
+          margin-left 0
+          margin-right 16px
+
+        .leg-part-content
+          flex-basis 220px
+
+    .leg-part-wrapper
+      margin-top 10px !important
+
+      &::before
+        margin-top 0 !important
+        margin-left 0 !important
+    .leg-part-description
+      font-size 12px !important
+      margin-bottom 10px
+
+      input
+        width 100%
+
+    .chaps-step-1-help
+      display none
+
+    .product-form
+      &.chaps-form
+        margin-bottom 50px
+        margin-top 50px
+
+      &.booty-form .form-title
+        padding 1em 0 0.3em 0
+
+      &.boot-form .input-row:first-of-type
+        margin-top 0
+
+      .chaps-form-legend
+        font-size 13px
+        width 100%
+
+      .boot-form-legend
+        font-size 13.5px
+        margin 2.1em auto
+
+      .input-row
+        flex-wrap wrap
+        font-size 13.5px
+
+      label
+        flex-basis 100%
+        text-align left
+
+      .input-wrapper
+        flex-basis 100%
+        font-size inherit
+
+      .shoe-size-input,
+      .skin-input
+        flex-basis 100%
+
+      button
+        font-size 15px
+
+@media screen and (max-width: 500px)
+  .product-form-section
+    .product-form
+      text-align center
+
+      .input-row
+        margin-top 20px
+
+      .first-name-input,
+      .last-name-input,
+      .address-input,
+      .country-input,
+      .postal-code-input
+        flex-basis 100%
+
+        &:not(.address-input):not(.first-name-input)
+          margin-top 0.7em
+
+@media screen and (max-width: 378px)
+  .product-form-section
+    .boot-foot-instructions:first-of-type :first-child .instruction-content
+      margin-top 0

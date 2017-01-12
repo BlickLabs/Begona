@@ -1,0 +1,233 @@
+.inner-heading
+    font-size 30px
+    font-weight 300
+    font-style normal
+    font-stretch normal
+    text-align center
+    color #000000
+    padding 0
+    margin 0
+    font-family 'Gotham Rounded Book'
+
+.product
+    width 100%
+    display inline-block
+    padding 60px 165px 80px 165px
+    @media mobile
+        padding 56px 20px
+    @media ipad
+        padding 95px 45px
+
+.product ul li
+    float: left
+    margin-bottom 50px
+    @media mobile
+        margin-bottom 10px
+        padding 0
+        width 50%
+    @media ipad
+        margin-bottom 22px
+
+.productImg.pimg
+    padding 8px 0
+
+.theme
+    .close
+        color #f1f1f1
+        font-size 100px
+        font-weight 400
+        position absolute
+        right -150px
+        top -150px
+        transition all .3s ease 0s
+        opacity 1
+        @media mobile
+            right 0
+            top -110px
+        @media ipad
+            right 0
+
+.theme
+    .nav-tabs
+        border medium none
+        margin 56px auto
+        width 610px
+        @media mobile
+            width 100%
+        & > li
+            & > a
+                border none
+                background #e5e5e5 none repeat scroll 0 0
+                border medium none
+                border-radius 100px
+                font-weight bold
+                padding 13px 30px
+                font-size 18px
+                color #4a4a4a
+                height 46px
+                margin 0 11px
+                font-family 'Gotham Rounded Book'
+                @media mobile
+                    text-align center
+                    font-size 15px
+                    padding 13px 10px
+                    margin 0 5px
+                &:focus
+                    background #feebc3
+                    border none
+
+.theme
+    .nav-tabs
+        li
+            &.current
+                a
+                    background #feebc3
+                    border none
+
+    .modal-content
+        &.modal-product
+            background #fff
+            width 730px
+            padding 20px 0 40px
+            @media mobile
+                width 100%
+
+.theme .nav-tabs > li.active > a,
+.theme .nav-tabs > li.active > a:hover,
+.theme .nav-tabs > li.active > a:focus
+    background #feebc3
+    border none
+
+.product-box
+    width 100%
+    display inline-block
+    text-align center
+    min-height 400px
+    h4
+        font-size 18px
+        font-weight 500
+        font-family 'Gotham Rounded'
+        font-style normal
+        font-stretch normal
+        letter-spacing -0.2px
+        text-align center
+        color #4a4a4a
+        margin 0
+        padding 0 0 20px
+    p
+        font-family Nexa
+        font-size 12px
+        font-weight bold
+        font-style normal
+        font-stretch normal
+        letter-spacing 1.2px
+        text-align center
+        color #9b9b9b
+    span
+        color #9b9b9b
+        font-size 13px
+        font-family 'Gotham Rounded Book'
+        strong
+            color #4a4a4a
+
+.productImg
+    width 100%
+    text-align center
+    min-height 218px
+    line-height 218px
+    vertical-align bottom
+    margin-bottom 25px
+    display inline-block
+
+    img
+        display inline
+        vertical-align bottom
+        max-height 190px
+        max-width 160px
+    &.pimg
+        padding 30px 0 10px 0
+
+.modal .productImg img
+  min-height 250px
+  max-height 300px
+  max-width 280px
+
+.product-detail
+    width 100%
+    display inline-block
+    padding 70px 0 0
+    border-top 2px solid #e5e5e5
+
+.modal-dialog
+    &.new-model
+        width 728px
+        @media mobile
+            width 95%
+
+.product-wrap
+    margin 0 auto
+    width 500px
+    text-align center
+    @media mobile
+        width 100%
+    img
+        display inline
+        width 120px
+        @media mobile
+            margin-bottom 30px
+    strong
+        font-size 18px
+        color #9b9b9b
+        font-family 'Gotham Rounded Book'
+        margin-top 30px
+        display inline-block
+        margin-bottom 90px
+    a
+        background #abc9d3
+        font-size 18px
+        color #fff
+        font-family 'Gotham Rounded Book'
+        border-radius 0
+        padding 12px 60px
+        font-weight bold
+
+.glyphicon-chevron-left.p-left, .glyphicon-chevron-right.p-right
+    margin 0 !important
+
+.product-description-row
+  width 80%
+  margin 0 auto
+
+.product-description-info
+  text-align left
+
+  h4, p
+    text-align inherit
+
+.product-description-button
+  text-align right
+
+.product-button
+  background #abc9d3
+  display inline-block
+  text-align center
+  color white
+  font-size 18px
+  font-family 'Gotham Rounded'
+  font-weight $medium
+  padding 0.8em 1.8em
+
+  &:hover,
+  &:focus,
+  &:active
+    background #feebc3
+    color #333
+    outline none
+
+@media screen and (max-width: 768px)
+  .product-description-info,
+  .product-description-button
+    text-align center
+
+  .product-description-button
+    margin-top 1.5em

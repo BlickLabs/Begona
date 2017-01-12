@@ -1,0 +1,231 @@
+
+{% extends "partials/base.njk" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+Hacer pedido | Botas
+{% endblock %}
+
+{% block content %}
+<div id="boots-form" class="product-form-section" action="." method="post">
+  <h1 class="section-title">Hacer pedido</h1>
+  <span class="subtitle">¿Cómo sé mis medidas?</span>
+
+  <span class="boot-example-text">Ejemplo de una pierna de 44 cm de largo:</span>
+  <img src="img/leg-example.png" class="boot-example-image" alt="Ejemplo de una pierna de 44 cm de largo." />
+  <div class="product-form-step">
+    <h2 class="step-title" data-number="1">Mide tu pierna</h2>
+    <p class="step-instructions boots-1">
+      Ve midiéndo la circunferencia de tu pierna
+      de abajo para arriba cada 4 cm. Y ve llenando los recuadros,
+      empezando a 12 cm del talón:
+    </p>
+    <p class="product-form-alert boots">
+      Se recomienda medirse con la ropa que vayas a utilizar siempre que uses las botas.
+    </p>
+    <div class="boot-step-1-content">
+      <span class="help-text help-text-1">Medirse sentado con la pierna en un ángulo de 90 grados</span>
+      <span class="help-text help-text-2">Las piernas por lo general llegan a medir hasta 36 cm de altura, entonces hasta 36 seria la última medida proporcionada</span>
+      <span class="help-line"><span></span></span>
+      <img src="img/boot-step-1.png" alt="Imagen de pierna" />
+      <div class="inputs-div">
+        <div class="input-row active">
+          <span class="arrow"></span>
+          <span class="circle">12</span>
+          <input type="text" name="name" placeholder="Ej. mide: 26 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">16</span>
+          <input type="text" name="name" placeholder="Ej. mide: 27 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">20</span>
+          <input type="text" name="name" placeholder="Ej. mide: 30 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">24</span>
+          <input type="text" name="name" placeholder="Ej. mide: 32.5 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">28</span>
+          <input type="text" name="name" placeholder="Ej. mide: 37.8 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">32</span>
+          <input type="text" name="name" placeholder="Ej. mide: 40 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">36</span>
+          <input type="text" name="name" placeholder="Ej. mide: 38 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">40</span>
+          <input type="text" name="name" placeholder="Ej. mide: 36 cm">
+        </div>
+        <div class="input-row">
+          <span class="arrow"></span>
+          <span class="circle">44</span>
+          <input type="text" name="name" placeholder="Ej. mide: 35 cm">
+        </div>
+      </div>
+      <span class="help-text-3">
+        <img src="img/boot-arrow-1.png" alt="Flecha" />
+        Empieza aquí
+      </span>
+    </div>
+  </div>
+  <div class="product-form-step">
+    <h2 class="step-title" data-number="2">Mide tu pie</h2>
+    <p class="step-instructions boots-2">
+      Sigue la instrucción de cada dibujo, y ve llenando los recuadros con tus medidas
+    </p>
+    <div class="boot-foot-instructions">
+      <div class="instruction active" data-number="1">
+        <div class="instruction-content">
+          <span class="instruction-title">Circunferencia de los dedos</span>
+          <p class="instruction-text">
+            a) Estando parado, toma la medida de la
+            circunferencia del dedo gordo del pie al dedo chiquito.
+          </p>
+          <div class="instruction-elements">
+            <img src="img/boot-foot-image-1.png" class="instruction-image" alt="Mide tu pie - Figura 1" />
+            <input type="text" class="instruction-input" name="name" placeholder="Ej. 22.5 cm">
+          </div>
+        </div>
+      </div>
+      <div class="instruction" data-number="2">
+        <div class="instruction-content">
+          <span class="instruction-title">Dedos</span>
+          <p class="instruction-text">
+            a) Medir la circunferencia del hueso del pie dónde
+            empieza el dedo gordo hasta el hueso dónde empieza el dedo chiquito
+          </p>
+          <div class="instruction-elements">
+            <img src="img/boot-foot-image-2.png" class="instruction-image" alt="Mide tu pie - Figura 2" />
+            <input type="text" class="instruction-input" name="name" placeholder="Ej. 24.5 cm">
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="boot-foot-divider first">
+    <div class="boot-foot-instructions">
+      <div class="instruction" data-number="3">
+        <div class="instruction-content">
+          <span class="instruction-title">Empeine</span>
+          <p class="instruction-text">
+            a) Medir la circunferencia del empeine.
+          </p>
+          <div class="instruction-elements">
+            <img src="img/boot-foot-image-3.png" class="instruction-image" alt="Mide tu pie - Figura 3" />
+            <input type="text" class="instruction-input" name="name" placeholder="Ej. 25 cm">
+          </div>
+        </div>
+      </div>
+      <div class="instruction" data-number="4">
+        <div class="instruction-content">
+          <span class="instruction-title">Talón</span>
+          <p class="instruction-text">
+            a) Medir la circunferencia desde el talón hasta el doblez del pie (queda en diagonal)
+          </p>
+          <div class="instruction-elements">
+            <img src="img/boot-foot-image-4.png" class="instruction-image" alt="Mide tu pie - Figura 4" />
+            <input type="text" class="instruction-input" name="name" placeholder="Ej. 33.5 cm">
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="boot-foot-divider second">
+    <div class="boot-foot-instructions">
+      <p class="step-instructions small">
+        Estando de pie, apoyando cómo normalmente pisas, marca un punto dónde está tu dedo más largo, y otro punto dónde está el talón. <br><br>
+        Quita el pie y mide el largo de esos dos puntos con una cinta.
+      </p>
+      <div class="instruction" data-number="5">
+        <div class="instruction-content">
+          <span class="instruction-title">Pie</span>
+          <p class="instruction-text">
+            a) Tomar medida del dedo más largo al talón.
+          </p>
+          <div class="instruction-elements">
+            <img src="img/boot-foot-image-5.png" class="instruction-image" alt="Mide tu pie - Figura 5" />
+            <input type="text" class="instruction-input" name="name" placeholder="Ej. 26.5 cm">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-form boot-form">
+    <h2 class="step-title" data-number="3">Llena tus datos</h2>
+    <span class="boot-form-legend">Si tienes medidas distintas en cada pierna anótalo en el campo de mensaje ya que es muy importante hacérnoslo saber</span>
+    <div class="input-row">
+      <label for="first-name">Nombre</label>
+      <div class="input-wrapper">
+        <input type="text" id="first-name" class="first-name-input" name="first-name" placeholder="Nombre (s)">
+        <input type="text" id="last-name" class="last-name-input" name="last-name" placeholder="Apellidos">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="address">Dirección</label>
+      <div class="input-wrapper">
+        <input type="text" id="address" class="address-input" name="address" placeholder="Calle, Col. Número">
+        <input type="text" id="country" class="country-input" name="country" placeholder="Estado">
+        <input type="text" id="postal-code" class="postal-code-input" name="postal-code" placeholder="C.P.">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="email">Correo electrónico</label>
+      <div class="input-wrapper">
+        <input type="email" id="email" class="full-input" name="email">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="shoe-size">Número de calzado mexicano</label>
+      <div class="input-wrapper">
+        <input type="number" id="shoe-size" class="shoe-size-input" name="shoe-size" min="1" max="12" placeholder="Ej. 7">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="shoe-size">Modelo</label>
+      <div class="input-wrapper">
+        <input type="text" disabled id="product-model" class="shoe-size-input" name="product-model">
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="skin-color">Color de la piel</label>
+      <div class="input-wrapper">
+        <select id="skin-color" class="skin-input" name="skin-color">
+          <option value="Negro">Negro</option>
+          <option value="Café">Café</option>
+          <option value="Camello">Camello</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="element">Elemento</label>
+      <div class="input-wrapper">
+        <select id="element" class="skin-input" name="element">
+          <option value="Portacicates">Portacicates</option>
+          <option value="Broche">Broche</option>
+          <option value="A los costados del cierre">A los costados del cierre</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-row">
+      <label for="description">Descripción de vestuario</label>
+      <div class="input-wrapper">
+        <textarea id="description" class="full-input description-input" name="description" placeholder="Decir cómo estaban vestidos a la hora de que se tomaron las medidas. Lo ideal es que se midan con la ropa que usan para montar."></textarea>
+      </div>
+    </div>
+    <button type="sumbit" name="send">Hacer pedido</button>
+  </div>
+</form>
+{% endblock %}
