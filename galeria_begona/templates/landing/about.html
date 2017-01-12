@@ -1,5 +1,5 @@
-
 {% extends "partials/base.html" %}
+{% load static from staticfiles %}
 
 {% block meta %}
 {% endblock %}
@@ -11,7 +11,7 @@ Acerca de nosotros
 {% block content %}
 <!--About-->
 
-<div class="parallax-window about-window" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="img/about.jpg"></div>
+<div class="parallax-window about-window" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="{% static 'img/about.jpg' %}"></div>
 
 
 <div class="container">
@@ -19,7 +19,7 @@ Acerca de nosotros
   <p>La historia de Begoña Fernández es una de esas historias que inspiran, y te dicen que las cosas se pueden lograr, partiendo a veces de algo que no te esperabas, pero que siempre había estado ahí, en tu día a día, en las cosas que te gustan.</p>
   <p>Así inició la elaboración y diseño de botas de gran calidad, a través de un proyecto universitario que culminó en una empresa dedicada a satisfacer a sus clientes, ofreciendo un producto de alta calidad.</p>
 
-  <div class="begona-text"><img src="img/begona-text-img.png" alt="About Us" class="img-responsive" /></div>
+  <div class="begona-text"><img src="{% static 'img/begona-text-img.png' %}" alt="About Us" class="img-responsive" /></div>
 
   <div class="benora-content">
   <p>- Montar a caballo es una de las actividades favoritas de Begoña, desde niña ha sentido la necesidad de estar en contacto con tan noble y enigmática especie. Fue a través de ésta gran pasión por los caballos la que llevó a crear uno de los principales elementos para practicar la equitación: las botas. Tan imprescindibles como el jinete, deben tener las características idóneas para lograr una armonía y obtener así una experiencia única.</p>

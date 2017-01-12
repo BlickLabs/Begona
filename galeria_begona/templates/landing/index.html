@@ -1,4 +1,5 @@
 {% extends "partials/base.html" %}
+{% load static from staticfiles %}
 
 {% block meta %}
 {% endblock %}
@@ -10,9 +11,9 @@ Homepage
 {% block content %}
 <!-- //Banner -->
 <div class="parallax-container">
-  <div class="parallax-window home-window" data-parallax="scroll" data-position-Y="115px"  data-bleed="5" data-image-src="img/slider-img.jpg">
+  <div class="parallax-window home-window" data-parallax="scroll" data-position-Y="115px"  data-bleed="5" data-image-src="{% static 'img/slider-img.jpg' %}">
     <div class="dimond-pattren"></div>
-    <div class="banner-text"><img src="img/slider-text.png" class="img-responsive" alt="Banner Text">
+    <div class="banner-text"><img src="{% static 'img/slider-text.png' %}" class="img-responsive" alt="Banner Text">
       <div><span></span></div>
     </div>
   </div>
@@ -35,19 +36,19 @@ Homepage
       <h3><span class="line"></span>Life is Simple, just add Boots</h3>
       <div class="row">
         <div class="col-xs-6 pd0">
-          <div class="gallery-img"><a href="#"><img src="img/1.jpg" class="img-responsive" alt="Gallery" /></a></div>
+          <div class="gallery-img"><a href="#"><img src="{% static 'img/1.jpg' %}" class="img-responsive" alt="Gallery" /></a></div>
         </div>
         <div class="col-xs-6 pd0">
-          <div class="gallery-img"><a href="#"><img src="img/2.jpg" class="img-responsive" alt="Gallery" /></a></div>
+          <div class="gallery-img"><a href="#"><img src="{% static 'img/2.jpg' %}" class="img-responsive" alt="Gallery" /></a></div>
         </div>
         <div class="col-xs-6 pd0">
-          <div class="gallery-img"><a href="#"><img src="img/3.jpg" class="img-responsive" alt="Gallery" /></a></div>
+          <div class="gallery-img"><a href="#"><img src="{% static 'img/3.jpg' %}" class="img-responsive" alt="Gallery" /></a></div>
         </div>
         <div class="col-xs-6 pd0">
-          <div class="gallery-img"><a href="#"><img src="img/4.jpg" class="img-responsive" alt="Gallery" /></a></div>
+          <div class="gallery-img"><a href="#"><img src="{% static 'img/4.jpg' %}" class="img-responsive" alt="Gallery" /></a></div>
         </div>
       </div>
-      <div class="text-center"><a href="products.html" class="btn galleryBtn" title="Ver más botas">Ver más botas</a></div>
+      <div class="text-center"><a href="{{ products }}" class="btn galleryBtn" title="Ver más botas">Ver más botas</a></div>
     </div>
     <div class="gallery-bg">
     </div>
@@ -56,7 +57,7 @@ Homepage
 
 <div class="hrsMain visible-md visible-lg">
 <div id='wrapper'>
-  <div id="horse-stop"><img src="img/radier.png" /></div>
+  <div id="horse-stop"><img src="{% static 'img/radier.png' %}" /></div>
 </div>
 </div>
 
@@ -65,12 +66,12 @@ Homepage
   <div class="shoose">
     <h3><span class="line"></span>Nuestras Botas</h3>
     <div class="shoose-detail hidden-xs"> <span class="detail1"> <strong class="text-right lft">Begoña <br />
-      Fernández logo</strong> <img src="img/arrow1.png" alt="Arrow" /> </span> <span class="detail2"> <strong class="text-right lft verTop">Back zipper</strong> <img src="img/arrow2.png" alt="Arrow" /> </span> <span class="detail3"> <strong class="text-right lft">Glued-stitched genuine<br />
-      leather and rubber sole</strong> <img src="img/arrow3.png" alt="Arrow" /> </span> <span class="detail4"> <img src="img/arrow4.png" alt="Arrow" /> <strong class="rht">Inside lining</strong> </span> <span class="detail5"> <img src="img/arrow5.png" alt="Arrow" /> <strong class="rht verTop" >Entirely handmade<br />
+      Fernández logo</strong> <img src="{% static 'img/arrow1.png' %}" alt="Arrow" /> </span> <span class="detail2"> <strong class="text-right lft verTop">Back zipper</strong> <img src="{% static 'img/arrow2.png' %}" alt="Arrow" /> </span> <span class="detail3"> <strong class="text-right lft">Glued-stitched genuine<br />
+      leather and rubber sole</strong> <img src="{% static 'img/arrow3.png' %}" alt="Arrow" /> </span> <span class="detail4"> <img src="{% static 'img/arrow4.png' %}" alt="Arrow" /> <strong class="rht">Inside lining</strong> </span> <span class="detail5"> <img src="{% static 'img/arrow5.png' %}" alt="Arrow" /> <strong class="rht verTop" >Entirely handmade<br />
       jumping and casual<br />
       boots</strong> </span>
-      <div class="shoose-img"><img src="img/shoose.png" class="img-responsive" alt="Shoose" /></div>
-      <span class="detail6"> <img src="img/arrow6.png" alt="Arrow" /> <strong class="rht">Superior quality leather</strong> </span> </div>
+      <div class="shoose-img"><img src="{% static 'img/shoose.png' %}" class="img-responsive" alt="Shoose" /></div>
+      <span class="detail6"> <img src="{% static 'img/arrow6.png' %}" alt="Arrow" /> <strong class="rht">Superior quality leather</strong> </span> </div>
 
 
     <div class="home-video">
@@ -88,24 +89,24 @@ Homepage
     <h3>¿Estás lista para<br />
       cotizar?</h3>
 
-<div class="horse-rider visible-xs visible-sm"><img src="img/radier.png" alt="Horse Rider" /></div>
+<div class="horse-rider visible-xs visible-sm"><img src="{% static 'img/radier.png' %}" alt="Horse Rider" /></div>
 <div class="bottomMenu"></div>
 
     <div class="row">
       <div class="col-sm-4">
-        <div class="icon-box"> <img src="img/icon-1.png" alt="Icon" />
+        <div class="icon-box"> <img src="{% static 'img/icon-1.png' %}" alt="Icon" />
           <p>Selecciona un<br />
             modelo</p>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="icon-box"> <img src="img/icon-2.png" alt="Icon" />
+        <div class="icon-box"> <img src="{% static 'img/icon-2.png' %}" alt="Icon" />
           <p>Toma tus<br />
             medidas</p>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="icon-box"> <img src="img/icon-3.png" alt="Icon" />
+        <div class="icon-box"> <img src="{% static 'img/icon-3.png' %}" alt="Icon" />
           <p>Pide tus<br />
             botas</p>
         </div>

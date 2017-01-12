@@ -1,4 +1,5 @@
 {% extends "partials/base.html" %}
+{% load static from staticfiles %}
 
 {% block meta %}
 {% endblock %}
@@ -59,7 +60,7 @@ Galería
                   </div>
                   <!-- Carousel nav -->
 
-                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon-chevron-left"><img src="img/left-arrow.png" /></span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon-chevron-right"><img src="img/right-arrow.png" /></span> </a> </div>
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon-chevron-left"><img src="{% static 'img/left-arrow.png' %}" /></span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon-chevron-right"><img src="{% static 'img/right-arrow.png' %}" /></span> </a> </div>
               </div>
             </div>
           </div>

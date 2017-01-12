@@ -1,8 +1,9 @@
+{% load static from staticfiles %}
 <div class="container-full">
   <footer>
   <div class="container">
-    <div class="footer-horse"><img src="img/footer-horse.png" alt="Footer Horse" /></div>
-    <div class="footer-wrap"> <img src="img/footer-logo.png" alt="Footer Logo" />
+    <div class="footer-horse"><img src="{% static 'img/footer-horse.png' %}" alt="Footer Horse" /></div>
+    <div class="footer-wrap"> <img src="{% static 'img/footer-logo.png' %}" alt="Footer Logo" />
       <p> &copy; Begoña Fernández <br />
         2016 todos los derechos</br>
         reservados</p>
