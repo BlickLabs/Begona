@@ -68,7 +68,7 @@
     min: jQuery.validator.format("Ingresa un valor mayor o igual que {0}")
   });
 
-  $.validators.setDefaults({
+  $.validator.setDefaults({
     invalidHandler: function (event, validator) {
       console.log(this);
       // $('#contact-form').find('.form-message')
@@ -90,13 +90,9 @@
 
       fields.attr('disabled', 'disabled');
       formMessage.html('');
-      $.post('http://mailchimp.blick.mx/email/sylvie/', $(form).serialize())
+      $.post($(form).attr('action'), $(form).serialize())
         .done(function (data) {
-          if (parseInt(data) === 1) {
-            setMessage(true);
-          } else {
-            setMessage(false);
-          }
+          setMessage(parseInt(data) === 1);
         })
         .fail(function () {
           setMessage(false);
