@@ -10,6 +10,7 @@ from django.contrib import admin
 from django.views import defaults as error_views
 
 from galeria_begona.apps.api import urls as api_urls
+from galeria_begona.apps.contacts import urls as contact_urls
 
 
 urlpatterns = [
@@ -17,7 +18,7 @@ urlpatterns = [
     url(r'^api/v1/', include(api_urls)),
 
     # Custom urls
-    # url(r'', include(module_urls, namespace='module')),
+    url(r'', include(contact_urls, namespace='contact')),
 ]
 
 if settings.DEBUG:

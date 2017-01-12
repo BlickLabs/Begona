@@ -152,3 +152,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 9
 }
+
+EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
+MAILGUN_ACCESS_KEY = env("MAILGUN_ACCESS_KEY")
+MAILGUN_SERVER_NAME = env("MAILGUN_SERVER_NAME")
+DEFAULT_EMAIL_TO = env("DEFAULT_EMAIL_TO")
