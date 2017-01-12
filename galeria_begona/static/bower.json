@@ -19,13 +19,14 @@
     "jquery-validation": "jquery-validate#^1.15.1",
     "parallax.js":"*",
     "bootstrap": "^3.3.7",
-    "font-awesome": "fontawesome#^4.7.0"
-
+    "font-awesome": "fontawesome#^4.7.0",
+    "loaders.css": "^0.1.2"
   },
   "group": {
     "css": [
       "bootstrap",
-      "font-awesome"
+      "font-awesome",
+      "loaders.css"
     ],
     "js": [
       "jquery",
