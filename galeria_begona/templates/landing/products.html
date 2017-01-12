@@ -139,19 +139,25 @@ Botas
         <div class="row" data-tag="all">
           <div class="product-detail">
             <div class="product-wrap">
-              <div class="col-sm-6"><img src="{% static 'img/product/product15.png' %}" class="img-responsive" alt="Product" /></div>
-              <div class="col-sm-6"><img src="{% static 'img/product/product16.png' %}" class="img-responsive" alt="Product" /></div>
+              <div class="col-sm-6 product-box">
+                <div class="productImg" data-toggle="modal" data-target="#ProductOne"><a href="#myCarousel" data-slide-to="15"><img src="{% static 'img/product/product15.png' %}" class="img-responsive" alt="Product" /></a></div>
+              </div>
+              <div class="col-sm-6 product-box">
+                <div class="productImg" data-toggle="modal" data-target="#ProductOne"><a  href="#myCarousel" data-slide-to="15"><img src="{% static 'img/product/product16.png' %}" class="img-responsive" alt="Product" /></a></div>
+              </div>
               <div class="col-sm-12"><strong>Chaparreras: $6,042</strong></div>
-              <div class="col-sm-12"><a href="/pedido-chaparrera?producto=chaparrera" class="btn">Cotiza</a></div>
             </div>
           </div>
         </div>
         <div class="row" data-tag="Chaparreras" data-only="true" style="display: none">
           <div class="product-wrap">
-            <div class="col-sm-6"><img src="{% static 'img/product/product15.png' %}" class="img-responsive" alt="Product" /></div>
-            <div class="col-sm-6"><img src="{% static 'img/product/product16.png' %}" class="img-responsive" alt="Product" /></div>
+            <div class="col-sm-6 product-box">
+              <div class="productImg" data-toggle="modal" data-target="#ProductOne"><a href="#myCarousel" data-slide-to="15"><img src="{% static 'img/product/product15.png' %}" class="img-responsive" alt="Product" /></a></div>
+            </div>
+            <div class="col-sm-6 product-box">
+              <div class="productImg" data-toggle="modal" data-target="#ProductOne"><a  href="#myCarousel" data-slide-to="16"><img src="{% static 'img/product/product16.png' %}" class="img-responsive" alt="Product" /></a></div>
+            </div>
             <div class="col-sm-12"><strong>Chaparreras: $6,042</strong></div>
-            <div class="col-sm-12"><a href="{{ chaps }}?producto=chaparrera" class="btn">Cotiza</a></div>
           </div>
         </div>
       </div>
@@ -207,7 +213,7 @@ Botas
                       </div>
 
 
-                    <div class="product-box item" data-slide-number="3">
+                    <div class="product-box item" data-slide-number="2">
                       <div class="productImg pimg"><a href="#">
                         <div> <img src="{% static 'img/product/product3.png' %}"></div>
                         </a></div>
@@ -222,7 +228,7 @@ Botas
                         </div>
                       </div>
 
-                    <div class="product-box item" data-slide-number="4">
+                    <div class="product-box item" data-slide-number="3">
                       <div class="productImg pimg booty-img"><a href="#">
                         <div> <img src="{% static 'img/product/product4.png' %}"></div>
                         </a></div>
@@ -417,8 +423,36 @@ Botas
                           </div>
                         </div>
                       </div>
-
-
+                      <div class="product-box item" data-slide-number="15">
+                        <div class="productImg pimg booty-img"><a href="#">
+                          <div> <img src="{% static 'img/product/product15.png' %}"></div>
+                          </a>
+                        </div>
+                        <div class="row product-description-row">
+                          <div class="col-md-7 col-sm-7 col-xs-12 product-description-info">
+                            <h4>Chaparrera 1</h4>
+                            <strong>Precio: <span style="color: #9b9b9b">$6,042</span></strong>
+                          </div>
+                          <div class="col-md-5 col-sm-5 col-xs-12 product-description-button">
+                            <a href="{{ chaps }}?producto=Chaparrera%201" class="product-button">Hacer pedido</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-box item" data-slide-number="17">
+                        <div class="productImg pimg booty-img"><a href="#">
+                          <div> <img src="{% static 'img/product/product16.png' %}"></div>
+                          </a>
+                        </div>
+                        <div class="row product-description-row">
+                          <div class="col-md-7 col-sm-7 col-xs-12 product-description-info">
+                            <h4>Chaparrera 2</h4>
+                            <strong>Precio: <span style="color: #9b9b9b">$6,042</span></strong>
+                          </div>
+                          <div class="col-md-5 col-sm-5 col-xs-12 product-description-button">
+                            <a href="{{ chaps }}?producto=Chaparrera%202" class="product-button">Hacer pedido</a>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                   <!-- Carousel nav -->
 
