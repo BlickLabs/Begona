@@ -1,21 +1,20 @@
 // init controller
 (function () {
 	function galleryFunction() {
-		var controller = new ScrollMagic.Controller();
+		var controller = new ScrollMagic.Controller(),
+			nextPage = 2;
+
+		function infinitescroll (e) {
+			if (!$(".gallery-wrapper #loader").hasClass("active")) {
+				$(".gallery-wrapper #loader").addClass("active");
+				getPhotos();
+			}
+		}
 
 		// build scene
 		var scene = new ScrollMagic.Scene({triggerElement: ".gallery-wrapper #loader", triggerHook: "onEnter"})
 			.addTo(controller)
-			.on("enter", function (e) {
-				if (!$(".gallery-wrapper #loader").hasClass("active")) {
-					$(".gallery-wrapper #loader").addClass("active");
-					if (console){
-						console.log("loading new items");
-					}
-					// simulate ajax call to add content using the function below
-					setTimeout(getPhotos, 1000, 9);
-				}
-			});
+			.on("enter", infinitescroll);
 
 		function getPhotos() {
 		  var data = { csrf: $('[name="csrfmiddlewaretoken"').val() };
@@ -30,6 +29,8 @@
 		  })
 		    .done(function (data) {
 		      var currentElements = $('#carousel-bounding-box .carousel-inner').children().length;
+					// nextPage = data.next,
+					// var	elements.data.results;
 		      data.slice(0, 9).forEach(function (item) {
 		        $('<div class="col-sm-4 spacer"></div>')
 		          .appendTo('.gallery-elements')
@@ -40,6 +41,12 @@
 		          .append('<img src="http://dev.com:8000/static/img/galeria/large/gallery1.jpg">');
 
 		        currentElements += 1;
+						if (nextPage === null) {
+							controller.destro(reset);
+							controller = null;
+							scene = null;
+							$('.gallery-wrapper #loader').remove();
+						}
 		      });
 		      scene.update();
 		    	$(".gallery-wrapper #loader").removeClass("active");

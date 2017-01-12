@@ -21,12 +21,23 @@
         padding 0
 
 .gallery-wrapper #loader
+  opacity 1
   text-align center
+  transition opacity 0.3s
 
-  img
+  &.active
+    opacity 1
+
+  .loader
     display block
+    height 50px
     margin 0 auto
+    margin-top 25px
+    transform translateX(45%)
     width 50px
+
+    .line-spin-fade-loader div
+      background black
 
 .galería-inner
     .gallery-image-wrapper
