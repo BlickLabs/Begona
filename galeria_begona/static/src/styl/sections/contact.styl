@@ -21,9 +21,15 @@
         font-style normal
         font-family 'Gotham Rounded Book'
         @media mobile
-            float left   
+            float left
+
+        &.error
+          color #ff3636
+          font-size 1.1em
+          padding 0
+          padding-top 10px
     @media mobile
-        padding 0 
+        padding 0
 
     .form-control
         width 100%
@@ -37,7 +43,7 @@
         outline none
     .contact-form .form-control:focus
         box-shadow none
-        outline none 
+        outline none
     .mensaje-box
         height 184px
         resize none
@@ -65,9 +71,31 @@
             font-size 20px
             height 50px
     .form-group
-        float left
-        margin-bottom 20px
-        width 100%
+      float left
+      margin-bottom 20px
+      width 100%
+
+    .begona-loader,
+    .form-message
+      text-align right
+      width 100%
+
+      .ball-pulse-sync
+        margin-right 45px
+        margin-top 30px
+
+      @media mobile
+        text-align center
+
+        .ball-pulse-sync
+          margin-right 0
+
+    .form-message
+      padding-right 30px
+      margin 20px 0
+
+      @media mobile
+        padding-right 0
 
 .contacto-content
     width 286px
@@ -111,7 +139,7 @@
             max-width 220px
         @media mobileLand
             max-width 400px
-            padding 0 75px    
+            padding 0 75px
     p
         font-size 18px
         color #9b9b9b
@@ -143,7 +171,7 @@
     @media ipad
         padding 0 15px
         width 100%
-        margin 60px 0 0 0px    
+        margin 60px 0 0 0px
 
 .line-botom
     width 104px
@@ -156,7 +184,7 @@
         margin 20px auto 10px auto
         display block
         width 104px
-        
+
 
 
 .btn-center

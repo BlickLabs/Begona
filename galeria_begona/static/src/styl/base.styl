@@ -21,6 +21,21 @@ html
 body
   font-family 'Nexa' !important
 
+.btn,
+button,
+[type="button"],
+[type="submit"]
+  outline none
+
+  &[disabled]
+    opacity 0.5
+
+input,
+textarea,
+select
+  &[disabled]
+    background #9c9c9c
+
 a
   &,
   &:hover,
