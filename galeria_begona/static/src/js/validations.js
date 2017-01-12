@@ -19,12 +19,12 @@
     accept_color3 = true;
 
   if ($('#model').length) {
-    _color = getUrlParameter('color');
-    _product = getUrlParameter('producto');
+    _color = global.getUrlParameter('color');
+    _product = global.getUrlParameter('producto');
     if (_product) {
       _product = _product.replace('+', ' ');
 
-      if (_product == 'Botín Clásico' || _product == 'Botin Clasico' || _product == 'botín clásico' || _product == 'botin clasico' || _product == 'Botín clásico' || _product == 'Botin clasico' || _product == 'Botin clásico' || _product == 'Botín clasico' || _product == 'botin clásico') {
+      if (_product === 'Botín Clásico' || _product === 'Botin Clasico' || _product === 'botín clásico' || _product === 'botin clasico' || _product === 'Botín clásico' || _product === 'Botin clasico' || _product === 'Botin clásico' || _product === 'Botín clasico' || _product === 'botin clásico') {
         accept_color3 = false;
       }
 
@@ -35,9 +35,9 @@
       $('#model').val(_product);
 
       if (_color) {
-        if (_color == 'Café' || _color == 'café' || _color == 'Cafe' || _color == 'cafe' ) {
+        if (_color === 'Café' || _color === 'café' || _color === 'Cafe' || _color === 'cafe' ) {
           $('#color').val('Café');
-        } else if (_color == 'Camello' || _color == 'camello' && accept_color3) {
+        } else if (_color === 'Camello' || _color === 'camello' && accept_color3) {
           $('#color').val('Camello');
         } else {
           $('#color').val('Negro');
@@ -68,9 +68,238 @@
     min: jQuery.validator.format("Ingresa un valor mayor o igual que {0}")
   });
 
-  $('#booty-form').validate({
+  $.validators.setDefaults({
+    invalidHandler: function (event, validator) {
+      console.log(this);
+      // $('#contact-form').find('.form-message')
+      // .removeClass($('#contact-form').hasClass('success') ? 'success' : 'error')
+      // .html('');
+    },
+    submitHandler: function (form) {
+      var fields = $(form).find('select, input, textarea, button'),
+        formMessage = $(form).find('.form-message'),
+        successMessage = $('<i class="fa fa-check-circle"></i><span>Mensaje enviado exitosamente</span>'),
+        errorMessage = $('<i class="fa fa-times-circle"></i><span>Ocurrió un error</span>'),
+        setMessage = function (success) {
+          var message = success ? successMessage : errorMessage;
+          fields.removeAttr('disabled');
+          formMessage.removeClass(success ? 'error' : 'success');
+          formMessage.addClass(success ? 'success' : 'error');
+          formMessage.html(message);
+        };
+
+      fields.attr('disabled', 'disabled');
+      formMessage.html('');
+      $.post('http://mailchimp.blick.mx/email/sylvie/', $(form).serialize())
+        .done(function (data) {
+          if (parseInt(data) === 1) {
+            setMessage(true);
+          } else {
+            setMessage(false);
+          }
+        })
+        .fail(function () {
+          setMessage(false);
+        })
+        .always(function () {
+          fields.removeAttr('disabled');
+        });
+    }
+  });
+
+  $('#contact-form').validate({
     rules: {
-      first_name: {
+      name: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      address: {
+        required: true
+      },
+      message: {
+        required: true
+      }
+    }
+  });
+
+  $('#boots-form').validate({
+    rules: {
+      leg_circ_12: {
+        required: true
+      },
+      leg_circ_16: {
+        required: true
+      },
+      leg_circ_20: {
+        required: true
+      },
+      leg_circ_24: {
+        required: true
+      },
+      leg_circ_28: {
+        required: true
+      },
+      leg_circ_32: {
+        required: true
+      },
+      leg_circ_36: {
+        required: true
+      },
+      leg_circ_40: {
+        required: false
+      },
+      leg_circ_44: {
+        required: false
+      },
+      finger_circ: {
+        required: true
+      },
+      bone_finger_circ: {
+        required: true
+      },
+      instep_circ: {
+        required: true
+      },
+      circ_heel_to_foot: {
+        required: true
+      },
+      circ_tip_to_hell: {
+        required: true
+      },
+      name: {
+        required: true
+      },
+      last_name: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      model: {
+        required: true
+      },
+      number: {
+        required: true
+      },
+      color: {
+        required: true
+      },
+      street_col: {
+        required: true
+      },
+      state: {
+        required: true
+      },
+      cp: {
+        required: true
+      },
+      description: {
+        required: true
+      }
+    }
+  });
+
+  $('#booties-form').validate({
+    rules: {
+      last_name: {
+        required: true
+      },
+      street_col: {
+        required: true
+      },
+      state: {
+        required: true
+      },
+      cp: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      model: {
+        required: true
+      },
+      number: {
+        required: true
+      },
+      color: {
+        required: true
+      },
+      element: {
+        required: true
+      }
+    }
+  });
+
+  $('#chaps-form').validate({
+    rules: {
+      hip_circ: {
+        required: true
+      },
+      high_circ: {
+        required: true
+      },
+      med_circ: {
+        required: true
+      },
+      down_circ: {
+        required: true
+      },
+      calf_circ: {
+        required: true
+      },
+      circ_27: {
+        required: true
+      },
+      circ_22: {
+        required: true
+      },
+      circ_17: {
+        required: true
+      },
+      circ_12: {
+        required: true
+      },
+      mouth_circ: {
+        required: true
+      },
+      name: {
+        required: true
+      },
+      model: {
+        required: true
+      },
+      last_name: {
+        required: true
+      },
+      street_col: {
+        required: true
+      },
+      state: {
+        required: true
+      },
+      cp: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      number: {
+        required: true
+      },
+      color: {
+        required: true
+      },
+      with_initials: {
+        required: true
+      },
+      initials: {
         required: true
       }
     }
