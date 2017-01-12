@@ -20,7 +20,21 @@
         background #fff
         padding 0
 
+.gallery-wrapper #loader
+  text-align center
+
+  img
+    display block
+    margin 0 auto
+    width 50px
+
 .galería-inner
+    .gallery-image-wrapper
+      display inline-block
+      height 269px
+      overflow hidden
+      width 269px
+
     .gallery-img
         margin-bottom 20px
         @media mobile
@@ -28,15 +42,15 @@
             text-align center
     img
         @media mobile
-            display inline    
-.carousel-inner 
+            display inline
+.carousel-inner
     text-align center
 
 .carousel-inner
     & > .item
         & > img
             display inline
-            
+
 #myImg
     border-radius 5px
     cursor pointer
@@ -89,7 +103,7 @@
     @media mobile
         margin-right -60px
     @media ipad
-        margin-right -100px    
+        margin-right -100px
 
 .theme .carousel-control .glyphicon-chevron-left,
 .theme .carousel-control .icon-prev

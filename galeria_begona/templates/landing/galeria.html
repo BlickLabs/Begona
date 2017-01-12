@@ -26,28 +26,28 @@ Galería
   <div class="galería-inner">
     <div class="row gallery-elements">
       <div class="col-sm-4 spacer">
-        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="0"> <img src="{% static 'img/galeria/gallery1.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
+        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="0"> <img src="{% static 'img/galeria/gallery1.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
       </div>
       <div class="col-sm-4 spacer">
-        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="1"> <img src="{% static 'img/galeria/gallery2.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
+        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="1"> <img src="{% static 'img/galeria/gallery2.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
       </div>
       <div class="col-sm-4 spacer">
-        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="2"> <img src="{% static 'img/galeria/gallery3.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
+        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="2"> <img src="{% static 'img/galeria/gallery3.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
       </div>
       <div class="col-sm-4 spacer">
-        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="3"> <img src="{% static 'img/galeria/gallery4.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
+        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="3"> <img src="{% static 'img/galeria/gallery4.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
       </div>
       <div class="col-sm-4 spacer">
-        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="4"> <img src="{% static 'img/galeria/gallery5.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
+        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="4"> <img src="{% static 'img/galeria/gallery5.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
       </div>
       <div class="col-sm-4 spacer">
-        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a href="#myCarousel" data-slide-to="5"> <img src="{% static 'img/galeria/gallery6.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
+        <div class="gallery-img" data-toggle="modal" data-target="#galleryOne"> <a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="5"> <img src="{% static 'img/galeria/gallery6.png' %}" class="img-responsive" alt="Gallery" /></a> </div>
       </div>
     </div>
   </div>
   <div id="loader">
   	<img src="../../img/example_loading.gif">
-  	LOADING...
+  	Cargando imagenes
   </div>
 </div>
 
@@ -57,7 +57,7 @@ Galería
     <div class="modal-content">
       <div class="modal-body ">
         <div class="row">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="img/close.png" /></span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="{% static 'img/close.png' %}" /></span></button>
           <div class="col-xs-12" id="slider">
             <!-- Top part of the slider -->
             <div class="row">
