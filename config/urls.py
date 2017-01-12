@@ -11,6 +11,7 @@ from django.views import defaults as error_views
 
 from galeria_begona.apps.api import urls as api_urls
 from galeria_begona.apps.contacts import urls as contact_urls
+from galeria_begona.apps.landing import urls as landing_urls
 
 
 urlpatterns = [
@@ -19,6 +20,7 @@ urlpatterns = [
 
     # Custom urls
     url(r'', include(contact_urls, namespace='contact')),
+    url(r'', include(landing_urls, namespace='landing')),
 ]
 
 if settings.DEBUG:
