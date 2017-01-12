@@ -46,6 +46,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'galeria_begona.apps.images',
     'galeria_begona.apps.api',
+    'galeria_begona.apps.landing',
 )
 
 INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS
@@ -140,7 +141,7 @@ SUIT_CONFIG = {
 # STATIC CONFIGURATION
 # -----------------------------------------------------------------------------
 STATICFILES_DIRS = (
-    str(PROJECT_DIR.path('static')),
+    str(PROJECT_DIR.path('static/dist')),
 )
 
 STATICFILES_FINDERS = (
