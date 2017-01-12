@@ -15,6 +15,7 @@ Contacto
       <div class="col-sm-7">
         <div class="contact-form">
           <form id="contact-form" action="{% url 'contact:contact' %}" method="post">
+            {% csrf_token %}
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="name">Nombre</label>

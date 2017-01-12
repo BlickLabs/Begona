@@ -9,6 +9,7 @@ Hacer pedido | Botines
 
 {% block content %}
 <form id="booties-form" class="product-form-section" action="{% url 'contact:booty' %}" method="post">
+  {% csrf_token %}
   <h1 class="section-title">Hacer pedido</h1>
   <div class="product-form booty-form">
     <h2 class="form-title">Llena tus datos</h2>

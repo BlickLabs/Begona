@@ -18,7 +18,7 @@
     color = '',
     accept_color3 = true;
 
-  if ($('#product-model').length) {
+  if ($('#model').length) {
     _color = getUrlParameter('color');
     _product = getUrlParameter('producto');
     if (_product) {
@@ -32,15 +32,15 @@
         $('option[value="Camello"]').remove();
       }
 
-      $('#product-model').val(_product);
+      $('#model').val(_product);
 
       if (_color) {
         if (_color == 'Café' || _color == 'café' || _color == 'Cafe' || _color == 'cafe' ) {
-          $('#skin-color').val('Café');
+          $('#color').val('Café');
         } else if (_color == 'Camello' || _color == 'camello' && accept_color3) {
-          $('#skin-color').val('Camello');
+          $('#color').val('Camello');
         } else {
-          $('#skin-color').val('Negro');
+          $('#color').val('Negro');
         }
       }
     }
