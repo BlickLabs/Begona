@@ -12,7 +12,7 @@ class Image(models.Model):
         max_length=100,
     )
     image = models.ImageField(
-        verbose_name='Imagenn',
+        verbose_name='Imagen',
         blank=False,
         null=False,
     )
