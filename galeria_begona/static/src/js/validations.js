@@ -76,8 +76,8 @@
       .html('');
     },
     submitHandler: function (form) {
-      console.log($(form).serialize());
-      var fields = $(form).find('select, input, textarea, button'),
+      var $form = $(form).serialize(),
+        fields = $(form).find('select, input, textarea, button'),
         formMessage = $(form).find('.form-message'),
         successMessage = $('<i class="fa fa-check-circle"></i><span>Mensaje enviado exitosamente</span>'),
         errorMessage = $('<i class="fa fa-times-circle"></i><span>Ocurrió un error</span>'),
@@ -95,7 +95,7 @@
       $.ajax({
         url: $(form).attr('action'),
         method: 'POST',
-        data: $(form).serialize(),
+        data: $form,
         headers: {
           'X-CSRFToken': $(form).find('[name="csrfmiddlewaretoken"]').val(),
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -103,6 +103,7 @@
       })
         .done(function (data) {
           setMessage(parseInt(data) === 1);
+          form.reset();
         })
         .fail(function () {
           setMessage(false);

@@ -162,7 +162,7 @@ class ChapsRequest(View):
     def dispatch(self, request, *args, **kwargs):
         return super(ChapsRequest, self) \
             .dispatch(request, *args, **kwargs)
-    
+
     def post(self, request):
         hip_circ = request.POST.get('hip_circ')
         high_circ = request.POST.get('high_circ')
