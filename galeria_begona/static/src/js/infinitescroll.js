@@ -1,8 +1,18 @@
 // init controller
 (function () {
 	function galleryFunction() {
-		var controller = new ScrollMagic.Controller(),
-			nextPage = 2;
+		var controller = null,
+			scene = null,
+			nextPage = $('.gallery-wrapper').attr('data-gallery-url');
+
+		getPhotos(true);
+
+		function ScrollMagic__init() {
+			controller = new ScrollMagic.Controller();
+			scene = new ScrollMagic.Scene({triggerElement: ".gallery-wrapper #loader", triggerHook: "onEnter"})
+				.addTo(controller)
+				.on("enter", infinitescroll);
+		}
 
 		function infinitescroll (e) {
 			if (!$(".gallery-wrapper #loader").hasClass("active")) {
@@ -11,15 +21,10 @@
 			}
 		}
 
-		// build scene
-		var scene = new ScrollMagic.Scene({triggerElement: ".gallery-wrapper #loader", triggerHook: "onEnter"})
-			.addTo(controller)
-			.on("enter", infinitescroll);
-
-		function getPhotos() {
+		function getPhotos(first) {
 		  var data = { csrf: $('[name="csrfmiddlewaretoken"').val() };
 		  $.ajax({
-		    url: 'https://jsonplaceholder.typicode.com/posts/',
+		    url: nextPage,
 		    method: 'GET',
 		    data: $.param(data),
 		    headers: {
@@ -28,27 +33,33 @@
 		    }
 		  })
 		    .done(function (data) {
-		      var currentElements = $('#carousel-bounding-box .carousel-inner').children().length;
-					// nextPage = data.next,
-					// var	elements.data.results;
-		      data.slice(0, 9).forEach(function (item) {
+		      var currentElements = $('#carousel-bounding-box .carousel-inner').children().length,
+						elements = data.results;
+					nextPage = data.next;
+		      elements.forEach(function (item) {
 		        $('<div class="col-sm-4 spacer"></div>')
 		          .appendTo('.gallery-elements')
-		          .append('<div class="gallery-img" data-toggle="modal" data-target="#galleryOne"><a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="' + currentElements + '"><img src="http://dev.com:8000/static/img/galeria/large/gallery1.jpg" class="img-responsive" alt="Gallery" /></a></div>');
+		          .append('<div class="gallery-img" data-toggle="modal" data-target="#galleryOne"><a class="gallery-image-wrapper" href="#myCarousel" data-slide-to="' + currentElements + '"><img src="' + item.image + '" class="img-responsive" alt="Gallery" /></a></div>');
 
 		    		$('<div class="item" data-slide-number="' + currentElements + '"></div>')
 		    			.appendTo("#carousel-bounding-box .carousel-inner")
-		          .append('<img src="http://dev.com:8000/static/img/galeria/large/gallery1.jpg">');
+		          .append('<img src="' + item.image + '">');
 
 		        currentElements += 1;
-						if (nextPage === null) {
-							controller.destro(reset);
-							controller = null;
-							scene = null;
-							$('.gallery-wrapper #loader').remove();
-						}
+
 		      });
-		      scene.update();
+					if (first) {
+						$('#carousel-bounding-box .carousel-inner').children().first().addClass('active');
+						ScrollMagic__init();
+					}
+					if (nextPage === null) {
+						controller.destroy(true);
+						controller = null;
+						scene = null;
+						$('.gallery-wrapper #loader').remove();
+					} else {
+		      	scene.update();
+					}
 		    	$(".gallery-wrapper #loader").removeClass("active");
 		    });
 		}
