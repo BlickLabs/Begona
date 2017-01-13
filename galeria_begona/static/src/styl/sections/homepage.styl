@@ -1,3 +1,16 @@
+.parallax-mirror
+  z-index 1 !important
+
+.parallax-container.homepage-parallax
+  margin-top 100px
+  height 80vh
+
+  .parallax-window
+    background-position center
+
+  @media mobile
+    height 50vh
+    margin-top 72px
 
 .parallax-container
     position relative
@@ -28,32 +41,22 @@
       vertical-align top
 
 .dimond-pattren
+  position absolute
+  top 0
+  background url(../img/home-pattern.png) repeat-x
+  background-size cover
+  height 100%
+  width 100%
+  z-index 3
+
+.homepage-parallax .banner-text
+    width 90%
     position absolute
-    top 0
-    background url(../img/home-pattern.png) repeat-x
-    background-size cover
-    height 100%
-    width 100%
-
-
-.banner-text
-    width 100%
-    padding-top 346px
-    position relative
+    top 50%
+    left 5%
+    transform translateY(-50%)
     z-index 999
-    @media mobile
-        padding-left 15px
-        padding-right 15px
-        padding-top 135px
-    @media mobileLand
-        padding-left 35px
-        padding-right 35px
-        padding-top 165px
 
-    @media ipad
-        padding-top 260px
-    @media ipadLand
-        padding-top 280px
     img
         display inline
     span
@@ -71,7 +74,7 @@
     width 100%
     text-align center
     padding 56px 0
-    margin-top 5px
+
     h2
         font-size 18px
         font-weight bold
