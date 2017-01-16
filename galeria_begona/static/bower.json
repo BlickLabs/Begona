@@ -21,7 +21,8 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "fontawesome#^4.7.0",
     "loaders.css": "^0.1.2",
-    "scrollmagic": "^2.0.5"
+    "scrollmagic": "^2.0.5",
+    "vimeo-player-js": "^2.0.1"
   },
   "group": {
     "css": [
@@ -34,7 +35,8 @@
       "jquery-validation",
       "parallax.js",
       "bootstrap",
-      "scrollmagic"
+      "scrollmagic",
+      "vimeo-player-js"
     ],
     "fonts": [
       "font-awesome"
