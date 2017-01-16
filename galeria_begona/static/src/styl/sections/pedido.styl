@@ -475,8 +475,23 @@
       vertical-align top
 
   .chaps-example-content
-    [data-number="2"]
-      left -151%
+    min-height 600px
+
+    .leg-parts-div
+      [data-number] .leg-part-description
+        margin-bottom 5px
+
+      [data-number="2"]
+        left -151%
+
+      [data-number="4"]::before
+        margin-top -5px
+
+      [data-number="6"]::before
+        margin-top -20px
+
+      [data-number="7"]
+        margin-top 5px
 
   .chaps-step-1-content
     margin-top 0
