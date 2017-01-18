@@ -778,3 +778,77 @@
     font-weight $bold
     margin 2.5em 0 1.2em 0
     text-align center
+
+#order-modal
+  background rgba(black, 0.51)
+  font-family 'Gotham Rounded'
+
+  .modal-dialog
+    margin 0
+    max-width 800px
+    left 50%
+    position absolute
+    top 50%
+    transform translate(-50%, calc(-50% - 30px))
+    width 91%
+
+    @media mobile
+      top 0
+      left 4.5%
+      padding 25px 0
+      transform none
+
+  .modal-header
+    border-bottom none
+    color #ffffff
+    font-size 21px
+    padding 0
+    position relative
+
+    .close
+      top 0 !important
+      transform none
+      right 0
+
+      span
+        display block
+        line-height 0
+
+  .modal-title
+    line-height 1
+    margin 0 auto
+    margin-top calc(0.7em + 40px)
+    max-width 453.5px
+    text-align center
+    width 93%
+
+  .modal-content
+    position relative
+    width 100%
+
+  .modal-body
+    background white
+    font-size 17px
+    margin-top 1.9em
+    padding 3em 2em 3.1em 2.1em
+
+    div
+      align-items flex-start
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+
+      @media mobile
+        justify-content center
+
+    img
+      width 133px
+
+    ul
+      line-height 1.35
+      color #9b9b9b
+      flex-basis calc(100% - 198px)
+
+      @media mobile
+        flex-basis 100%
+        margin-top 2em
