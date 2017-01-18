@@ -1,35 +1,36 @@
 {% block content %}
   <p>
-    Nombre del cliente: {{ name }} {{ last_name }} <br>
-    Correo electronico: {{ email }} <br>
-    Numero: {{ number }} <br>
-    Modelo: {{ model }} <br>
-    Color: {{ color }} <br>
-    Porta acicates: {{ element }} <br>
-    Descripcion: {{ description }} <br>
+    <b>Nombre del cliente:</b> {{ name }} {{ last_name }} <br>
+    <b>Correo electronico:</b> {{ email }} <br>
+    <b>Numero:</b> {{ number }} <br>
+    <b>Modelo:</b> {{ model }} <br>
+    <b>Color:</b> {{ color }} <br>
+    <b>Porta acicates:</b> {{ element }} <br>
+    <b>Descripcion:</b> {{ description }} <br>
   </p>
   <p>
-    Direccion: {{ street_col }} <br>
-    Calle, Col. Número: {{ state }} <br>
-    Codigo Postal: {{ cp }} <br>
+    <b>Direccion:</b>
+    &nbsp;&nbsp;&nbsp;<b>Calle, Col. Número:</b> {{ street_col }} <br>
+    &nbsp;&nbsp;&nbsp;<b>Estado:</b> {{ state }} <br>
+    &nbsp;&nbsp;&nbsp;<b>Codigo Postal:</b> {{ cp }} <br>
   </p>
   <p>
     Circunferencia de piernas a los... <br>
-    &nbsp;&nbsp;12 cm: {{ leg_circ_12 }} <br>
-    &nbsp;&nbsp;16 cm: {{ leg_circ_16 }} <br>
-    &nbsp;&nbsp;20 cm: {{ leg_circ_20 }} <br>
-    &nbsp;&nbsp;24 cm: {{ leg_circ_24 }} <br>
-    &nbsp;&nbsp;28 cm: {{ leg_circ_28 }} <br>
-    &nbsp;&nbsp;32 cm: {{ leg_circ_32 }} <br>
-    &nbsp;&nbsp;36 cm: {{ leg_circ_36 }} <br>
-    &nbsp;&nbsp;40 cm: {{ leg_circ_40 }} <br>
-    &nbsp;&nbsp;44 cm: {{ leg_circ_44 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>12 cm:</b> {{ leg_circ_12 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>16 cm:</b> {{ leg_circ_16 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>20 cm:</b> {{ leg_circ_20 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>24 cm:</b> {{ leg_circ_24 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>28 cm:</b> {{ leg_circ_28 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>32 cm:</b> {{ leg_circ_32 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>36 cm:</b> {{ leg_circ_36 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>40 cm:</b> {{ leg_circ_40 }} <br>
+    &nbsp;&nbsp;&nbsp;<b>44 cm:</b> {{ leg_circ_44 }} <br>
   </p>
   <p>
-    Circunferencia de los dedos: {{ finger_circ }} <br>
-    Circunferencia del hueso del pie: {{ bone_finger_circ }} <br>
-    Circunferencia del empeine: {{ instep_circ }} <br>
-    Circunferencia del talón hasta el doblez del pie: {{ circ_heel_to_foot }} <br>
-    Distancia de la punta del dedo más largo hasta el talón: {{ circ_tip_to_hell }} <br>
+    <b>Circunferencia de los dedos:</b> {{ finger_circ }} <br>
+    <b>Circunferencia del hueso del pie:</b> {{ bone_finger_circ }} <br>
+    <b>Circunferencia del empeine:</b> {{ instep_circ }} <br>
+    <b>Circunferencia del talón hasta el doblez del pie:</b> {{ circ_heel_to_foot }} <br>
+    <b>Distancia de la punta del dedo más largo hasta el talón:</b> {{ circ_tip_to_hell }} <br>
   </p>
 {% endblock %}

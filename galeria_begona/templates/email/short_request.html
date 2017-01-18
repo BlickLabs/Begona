@@ -1,27 +1,28 @@
 {% block content %}
   <p>
-    Nombre del cliente: {{ name }} {{ last_name }} <br>
-    Correo electronico: {{ email }} <br>
-    Modelo: {{ model }} <br>
-    Color: {{ color }} <br>
-    Con iniciales: {{ with_initials }} <br>
-    Iniciales: {{ initials }} <br>
+    <b>Nombre del cliente:</b> {{ name }} {{ last_name }} <br>
+    <b>Correo electronico:</b> {{ email }} <br>
+    <b>Modelo:</b> {{ model }} <br>
+    <b>Color:</b> {{ color }} <br>
+    <b>Con iniciales:</b> {{ with_initials }} <br>
+    <b>Iniciales:</b> {{ initials }} <br>
   </p>
   <p>
-    Direccion: {{ street_col }} <br>
-    Calle, Col. Número: {{ state }} <br>
-    Codigo Postal: {{ cp }} <br>
+    <b>Direccion:</b>
+    &nbsp;&nbsp;&nbsp;<b>Calle, Col. Número:</b> {{ street_col }} <br>
+    &nbsp;&nbsp;&nbsp;<b>Estado:</b> {{ state }} <br>
+    &nbsp;&nbsp;&nbsp;<b>Codigo Postal:</b> {{ cp }} <br>
   </p>
   <p>
-    Circunferencia de la cadera: {{hip_circ }} <br>
-    Circunferencia de parte alta: {{ high_circ }} <br>
-    Circunferencia de parte media: {{ med_circ }} <br>
-    Circunferencia de parte baja: {{ down_circ }} <br>
-    Circunferencia de pantorrilla: {{ calf_circ }} <br>
-    Circunferencia a los 12cm: {{ circ_12 }} <br>
-    Circunferencia a los 17cm: {{ circ_17 }} <br>
-    Circunferencia a los 22cm: {{ circ_22 }} <br>
-    Circunferencia a los 27cm: {{ circ_27 }} <br>
-    Circunferencia boca del botín: {{ mouth_circ }} <br>
+    <b>Circunferencia de la cadera:</b> {{hip_circ }} <br>
+    <b>Circunferencia de parte alta:</b> {{ high_circ }} <br>
+    <b>Circunferencia de parte media:</b> {{ med_circ }} <br>
+    <b>Circunferencia de parte baja:</b> {{ down_circ }} <br>
+    <b>Circunferencia de pantorrilla:</b> {{ calf_circ }} <br>
+    <b>Circunferencia a los 12cm:</b> {{ circ_12 }} <br>
+    <b>Circunferencia a los 17cm:</b> {{ circ_17 }} <br>
+    <b>Circunferencia a los 22cm:</b> {{ circ_22 }} <br>
+    <b>Circunferencia a los 27cm:</b> {{ circ_27 }} <br>
+    <b>Circunferencia boca del botín:</b> {{ mouth_circ }} <br>
   </p>
 {% endblock %}
