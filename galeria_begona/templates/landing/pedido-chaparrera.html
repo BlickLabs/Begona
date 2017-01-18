@@ -1,5 +1,6 @@
 {% extends "partials/base.html" %}
 {% load static from staticfiles %}
+{% load humanize %}
 
 {% block meta %}
 {% endblock %}
@@ -253,6 +254,7 @@ Hacer pedido | Chaparreras
         </div>
       </div>
     </div>
+    <span class="single-product-price">Precio de la chaparrera ${{ price|intcomma }}</span>
     <div class="form-message">
     </div>
     <button type="sumbit" name="send">Hacer pedido</button>
