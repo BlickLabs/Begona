@@ -222,10 +222,10 @@ Hacer pedido | Botas
       <div class="input-wrapper">
         <div class="shoe-size-input">
           <select id="color" class="full-input" name="color">
-            <option value="Negro">Negro</option>
-            <option value="Café miel">Café miel</option>
-            <option value="Café chocolate">Café chocolate</option>
-            <option value="Camel">Camel (No siempre está disponible)</option>
+            <option value="Negro" {% if color == 'Negro' %}selected{% endif %}>Negro</option>
+            <option value="Café miel" {% if color == 'Café miel' %}selected{% endif %}>Café miel</option>
+            <option value="Café chocolate" {% if color == 'Café chocolate' %}selected{% endif %}>Café chocolate</option>
+            <option value="Camel" {% if color == 'Camel' %}selected{% endif %}>Camel (No siempre está disponible)</option>
           </select>
         </div>
       </div>

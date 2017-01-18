@@ -229,8 +229,8 @@ Hacer pedido | Chaparreras
       <div class="input-wrapper">
         <div class="shoe-size-input">
           <select id="color" class="full-input" name="color">
-            <option value="Negro">Negro</option>
-            <option value="Café obscuro">Café obscuro</option>
+            <option value="Negro" {% if color == 'Negro' %}selected{% endif %}>Negro</option>
+            <option value="Café obscuro" {% if color == 'Café obscuro' %}selected{% endif %}>Café obscuro</option>
           </select>
         </div>
       </div>

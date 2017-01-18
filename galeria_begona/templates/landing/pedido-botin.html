@@ -69,9 +69,11 @@ Hacer pedido | Botines
       <div class="input-wrapper">
         <div class="shoe-size-input">
           <select id="color" class="full-input" name="color">
-            <option value="Negro">Negro</option>
-            <option value="Café">Café</option>
-            <option value="Camello">Camello</option>
+            <option value="Negro" {% if color == 'Negro' %}selected{% endif %}>Negro</option>
+            <option value="Café" {% if color == 'Café' %}selected{% endif %}>Café</option>
+            {% if product != 'Botín clásico' %}
+            <option value="Camel" {% if color == 'Camel' %}selected{% endif %}>Camel (No siempre esta disponible)</option>
+            {% endif %}
           </select>
         </div>
       </div>
