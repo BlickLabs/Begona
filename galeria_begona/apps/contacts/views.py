@@ -181,7 +181,6 @@ class ChapsRequest(View):
         state = request.POST.get('state')
         cp = request.POST.get('cp')
         email = request.POST.get('email')
-        number = request.POST.get('number')
         color = request.POST.get('color')
         with_initials = request.POST.get('with_initials')
         initials = request.POST.get('initials')
@@ -203,7 +202,6 @@ class ChapsRequest(View):
             'state': state,
             'cp': cp,
             'email': email,
-            'number': number,
             'model': model,
             'color': color,
             'with_initials': with_initials,
