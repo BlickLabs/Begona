@@ -1,0 +1,26 @@
+{% load static from staticfiles %}
+<a href="#" data-toggle="modal" data-target="#order-modal">Open modal</a>
+
+<div role="dialog" class="modal fade" id="order-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Una vez realizado el depósito, tus botas/botines entran a producción</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="{% static 'img/close.png' %}" /></span></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <img src="{% static 'img/card.png' %}" alt="">
+          <ul>
+            <li>Banamex</li>
+            <li>Nombre: Begoña Fernández Gómez</li>
+            <li>Sucursal 7001 Plaza del Río, Veracruz</li>
+            <li>Número de cuenta: 544201</li>
+            <li>Clabe Interbancaria: 002905700105442018</li>
+            <liNúmero de tarjeta: 5204 1643 9556 4195></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
