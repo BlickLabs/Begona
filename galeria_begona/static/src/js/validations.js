@@ -54,6 +54,9 @@
       })
         .done(function (data) {
           setMessage(parseInt(data) === 1);
+          if ($('#order-modal').length) {
+            $('#order-modal').modal('show');
+          }
           form.reset();
         })
         .fail(function () {
