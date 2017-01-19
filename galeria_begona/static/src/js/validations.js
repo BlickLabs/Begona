@@ -56,6 +56,9 @@
           setMessage(parseInt(data) === 1);
           if ($('#order-modal').length && parseInt(data) === 1) {
             $('#order-modal').modal('show');
+            $('#order-modal').on('hidden.bs.modal', function () {
+              window.location = location.origin ? location.origin : location.protocol + "//" + location.host;
+            });
           }
           form.reset();
         })
