@@ -60,7 +60,9 @@
               window.location = location.origin ? location.origin : location.protocol + "//" + location.host;
             });
           }
-          form.reset();
+          if (parseInt(data) === 1){
+            form.reset();
+          }
         })
         .fail(function () {
           setMessage(false);
