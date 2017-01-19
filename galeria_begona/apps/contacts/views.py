@@ -33,12 +33,6 @@ class ContactView(View):
                 to_email=[settings.DEFAULT_EMAIL_TO],
                 context=ctx
             )
-            send_email(
-                subject='email/subjects/payment_info.txt',
-                body='email/payment_info.html',
-                to_email=[email],
-                context={}
-            )
 
             return HttpResponse('1')
         except:
@@ -232,6 +226,12 @@ class ChapsRequest(View):
                 body='email/short_request.html',
                 to_email=[settings.DEFAULT_EMAIL_TO],
                 context=ctx
+            )
+            send_email(
+                subject='email/subjects/payment_info.txt',
+                body='email/payment_info.html',
+                to_email=[email],
+                context={}
             )
 
             return HttpResponse('1')
