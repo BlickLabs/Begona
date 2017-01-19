@@ -54,7 +54,7 @@
       })
         .done(function (data) {
           setMessage(parseInt(data) === 1);
-          if ($('#order-modal').length) {
+          if ($('#order-modal').length && parseInt(data) === 1) {
             $('#order-modal').modal('show');
           }
           form.reset();
