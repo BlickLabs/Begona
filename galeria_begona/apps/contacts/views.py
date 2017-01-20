@@ -16,8 +16,6 @@ class ContactView(View):
         address = request.POST.get('address')
         message = request.POST.get('message')
 
-        print('Se obtuvieron las variables')
-
         ctx = {
             'name': name,
             'email': email,
@@ -25,16 +23,13 @@ class ContactView(View):
             'message': message
         }
 
-        print('Se creo el contexto')
         try:
-            print('Antes de enviar el mail')
             send_email(
                 subject='email/subjects/contact.txt',
                 body='email/contact.html',
                 to_email=[settings.DEFAULT_EMAIL_TO],
                 context=ctx
             )
-            print('Despues de enviar el mail')
             return HttpResponse('1')
         except:
             return HttpResponse('0')
