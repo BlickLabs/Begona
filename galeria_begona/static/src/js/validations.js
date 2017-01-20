@@ -74,7 +74,43 @@
     }
   });
 
-  $('#contact-form').validate({
+  function enterToTab(validators) {
+    function getWrapper(form, input) {
+      return form.is('#contact-form') ? input.closest('.form-group') : input.closest('.input-row');
+    }
+    function findNextInput(form, input) {
+      var nextInput = null,
+        closestWrapper = getWrapper(form, input),
+        parent = input.parent();
+      if (closestWrapper.is('.input-row') && closestWrapper.children().length > 1 && !parent.is(':last-child')) {
+        nextInput = parent.next().find('input, textarea, select').first();
+      } else {
+        nextInput = closestWrapper.next().find('input, textarea, select').first();
+      }
+      return nextInput.is('[disabled]') ? findNextInput(form, nextInput) : nextInput;
+    }
+    function attachEvent(validator) {
+      var form = $(validator.currentForm);
+      form.find('input, select')
+        .keypress(function (e) {
+          var closestWrapper = getWrapper(form, $(this)),
+            parent = $(this).parent(),
+            lookFor = form.is('#contact-form') ? '.row' : '.single-product-price',
+            nextInput = null;
+          if (e.which === 13 && !closestWrapper.next().is(lookFor)) {
+            e.preventDefault();
+            nextInput = findNextInput(form, $(this));
+            nextInput.focus();
+            validator.element(this);
+          }
+        });
+    }
+    validators.filter(function (item) {
+      return item !== undefined;
+    }).forEach(attachEvent);
+  }
+
+  var contactForm = $('#contact-form').validate({
     rules: {
       name: {
         required: true
@@ -90,9 +126,8 @@
         required: true
       }
     }
-  });
-
-  $('#boots-form').validate({
+  }),
+  bootsForm = $('#boots-form').validate({
     rules: {
       leg_circ_12: {
         required: true
@@ -168,9 +203,8 @@
         required: true
       }
     }
-  });
-
-  $('#booties-form').validate({
+  }),
+  bootiesForm = $('#booties-form').validate({
     rules: {
       name: {
         required: true
@@ -204,9 +238,8 @@
         required: true
       }
     }
-  });
-
-  $('#chaps-form').validate({
+  }),
+  chapsForm = $('#chaps-form').validate({
     rules: {
       hip_circ: {
         required: true
@@ -274,4 +307,6 @@
       }
     }
   });
+
+  enterToTab([contactForm, bootsForm, bootiesForm, chapsForm]);
 })();
