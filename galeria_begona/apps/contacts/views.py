@@ -9,16 +9,14 @@ from galeria_begona.core.utils import send_email
 
 
 class ContactView(View):
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super(ContactView, self) \
-            .dispatch(request, *args, **kwargs)
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         address = request.POST.get('address')
         message = request.POST.get('message')
+
+        print('Se obtuvieron las variables')
 
         ctx = {
             'name': name,
@@ -26,14 +24,17 @@ class ContactView(View):
             'address': address,
             'message': message
         }
+
+        print('Se creo el contexto')
         try:
+            print('Antes de enviar el mail')
             send_email(
                 subject='email/subjects/contact.txt',
                 body='email/contact.html',
                 to_email=[settings.DEFAULT_EMAIL_TO],
                 context=ctx
             )
-
+            print('Despues de enviar el mail')
             return HttpResponse('1')
         except:
             return HttpResponse('0')
@@ -120,11 +121,6 @@ class BootRequestView(View):
 
 
 class BootyRequest(View):
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super(BootyRequest, self) \
-            .dispatch(request, *args, **kwargs)
-
     def post(self, request):
         name = request.POST.get('name')
         last_name = request.POST.get('last_name')
@@ -170,10 +166,6 @@ class BootyRequest(View):
 
 
 class ChapsRequest(View):
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super(ChapsRequest, self) \
-            .dispatch(request, *args, **kwargs)
 
     def post(self, request):
         hip_circ = request.POST.get('hip_circ')
