@@ -6,7 +6,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template import loader
 
 
-DEFAULT_NOTIFICATION_EMAIL_FROM = "Begoña Fernandez <postmaster@%s>" % (
+DEFAULT_NOTIFICATION_EMAIL_FROM = "Begona Fernandez <postmaster@%s>" % (
     settings.MAILGUN_SERVER_NAME
 )
 
