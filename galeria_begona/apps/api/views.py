@@ -9,4 +9,4 @@ from galeria_begona.apps.images.models import Image
 
 class ImageList(generics.ListCreateAPIView):
     serializer_class = ImageSerializer
-    queryset = Image.objects.all().reverse()
+    queryset = Image.objects.all().order_by('-date')
