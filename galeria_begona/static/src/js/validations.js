@@ -44,7 +44,7 @@
       if ($serialized.indexOf('&model=') === -1) {
         $form.push({ name: 'model', value: $('[name="model"]').val() });
       }
-      console.log($form);
+  
       fields.attr('disabled', 'disabled');
       formMessage.html('');
       $(form).find('.loader').css('display', 'block');
