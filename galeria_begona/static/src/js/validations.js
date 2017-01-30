@@ -148,6 +148,9 @@
       model: {
         required: true
       },
+      phone: {
+        required: true
+      },
       number: {
         required: true
       },
@@ -193,6 +196,9 @@
         required: true
       },
       number: {
+        required: true
+      },
+      phone: {
         required: true
       },
       color: {
@@ -256,6 +262,9 @@
       email: {
         required: true,
         email: true
+      },
+      phone: {
+        required: true
       },
       number: {
         required: true
