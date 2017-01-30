@@ -27,8 +27,9 @@
       .html('');
     },
     submitHandler: function (form) {
-      var $form = $(form).serialize(),
-        fields = $(form).find('select, input, textarea, button'),
+      var $form = $(form).serializeArray(),
+        $serialized = $(form).serialize(),
+        fields = $(form).find('select, input, textarea, button').not('[disabled ]'),
         formMessage = $(form).find('.form-message'),
         successMessage = $('<i class="fa fa-check-circle"></i><span>Mensaje enviado exitosamente</span>'),
         errorMessage = $('<i class="fa fa-times-circle"></i><span>Ocurrió un error</span>'),
@@ -40,6 +41,10 @@
           formMessage.html(message);
         };
 
+      if ($serialized.indexOf('&model=') === -1) {
+        $form.push({ name: 'model', value: $('[name="model"]').val() });
+      }
+      console.log($form);
       fields.attr('disabled', 'disabled');
       formMessage.html('');
       $(form).find('.loader').css('display', 'block');
@@ -276,7 +281,7 @@
         required: true
       },
       initials: {
-        required: true
+        required: false
       }
     }
   });
