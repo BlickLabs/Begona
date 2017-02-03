@@ -44,7 +44,7 @@
       if ($serialized.indexOf('&model=') === -1) {
         $form.push({ name: 'model', value: $('[name="model"]').val() });
       }
-  
+
       fields.attr('disabled', 'disabled');
       formMessage.html('');
       $(form).find('.loader').css('display', 'block');
@@ -99,25 +99,25 @@
   bootsForm = $('#boots-form').validate({
     rules: {
       leg_circ_12: {
-        required: true
+        required: false
       },
       leg_circ_16: {
-        required: true
+        required: false
       },
       leg_circ_20: {
-        required: true
+        required: false
       },
       leg_circ_24: {
-        required: true
+        required: false
       },
       leg_circ_28: {
-        required: true
+        required: false
       },
       leg_circ_32: {
-        required: true
+        required: false
       },
       leg_circ_36: {
-        required: true
+        required: false
       },
       leg_circ_40: {
         required: false
