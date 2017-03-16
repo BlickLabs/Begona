@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 from __future__ import absolute_import, unicode_literals
 
+import dj_database_url
 import environ
 
 # DIRS
@@ -74,6 +75,10 @@ MIGRATION_MODULES = {
 FIXTURE_DIRS = (
     str(PROJECT_DIR.path('fixtures')),
 )
+
+DATABASES = {
+    'default': dj_database_url.config()
+}
 
 # GENERAL CONFIGURATION
 # -----------------------------------------------------------------------------
