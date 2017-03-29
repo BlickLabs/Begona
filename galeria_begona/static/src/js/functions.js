@@ -1,8 +1,6 @@
 $(document).ready(function() {
 	$('.parallax-window').parallax({});
 
- 	$('#myCarousel').carousel({interval: 5000});
-
   $('#carousel-text').html($('#slide-content-0').html());
     //Handles the carousel thumbnails
   $('[id^=carousel-selector-]').click( function(){
