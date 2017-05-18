@@ -35,7 +35,7 @@ class BootTemplateView(TemplateView):
     template_name = 'landing/pedido-bota.html'
 
     def get_context_data(self, **kwargs):
-        return get_product_context_data(self, BootTemplateView, 'Bota clásica', 6542, **kwargs)
+        return get_product_context_data(self, BootTemplateView, 'Bota clásica', 4800, **kwargs)
 
 class BootyTemplateView(TemplateView):
     template_name = 'landing/pedido-botin.html'
