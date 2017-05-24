@@ -22,7 +22,7 @@
 		}
 
 		function getPhotos(first) {
-		  var data = { csrf: $('[name="csrfmiddlewaretoken"').val() };
+		  var data = { csrf: $('[name="csrfmiddlewaretoken"]').val() };
 		  $.ajax({
 		    url: nextPage,
 		    method: 'GET',
